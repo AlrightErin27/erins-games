@@ -1,0 +1,13 @@
+.Home {
+  margin: 0;
+  background-color: beige;
+  height: 95vh;
+}
+.dispayRoutes-navbar {
+  background-color: rgb(229, 229, 243);
+  height: 10%;
+}
+.dispayRoutes-components {
+  background-color: rgb(130, 130, 153);
+  height: 90%;
+}
