@@ -3,12 +3,10 @@ import "./NavBar.css";
 
 export default function Navbar() {
   return (
-    <nav className="nav">
-      {/* <Link to="/">Home</Link> */}
+    <nav className="NavBar">
       <ul>
         <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/tic-tac-toe">Tic-Tac-Toe</CustomLink>
-        <CustomLink to="/game">Game</CustomLink>
+        <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
         <CustomLink to="/concentration">Concentration</CustomLink>
       </ul>
     </nav>
