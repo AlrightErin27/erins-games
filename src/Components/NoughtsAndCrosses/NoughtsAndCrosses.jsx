@@ -1,5 +1,5 @@
-import "NoughtsAndCrosses.css";
+// import "NoughtsAndCrosses.css";
 
 export default function NoughtsAndCrosses() {
-  return <div className="NoughtsAndCrosses"></div>;
+  return <div className="NoughtsAndCrosses">Noughts and crosses</div>;
 }

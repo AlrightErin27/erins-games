@@ -19,8 +19,12 @@
   width: 100%;
 }
 .dispayRoutes-navbar {
-  height: 7%;
+  height: 7vh;
 }
 .dispayRoutes-components {
-  height: 93%;
+  height: 92vh;
+  /* border: red solid 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -3,9 +3,10 @@
 /* font-family: "Michroma", sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* font-family: "Cutive Mono", monospace; */
+
 .NavBar {
   margin: 0;
-  /* background-color: green; */
+  padding-top: 0.5rem;
   height: 100%;
   font-family: "Cutive Mono", monospace;
   font-size: 1.7rem;
@@ -25,7 +26,6 @@
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
-
 .NavBar li.active {
   text-shadow: #6e6a56 1px 0 10px;
 }
