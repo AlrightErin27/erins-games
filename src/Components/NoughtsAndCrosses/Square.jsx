@@ -1,4 +1,4 @@
-const Square = ({ idx, val, key, chooseSquare }) => {
+const Square = ({ idx, val, chooseSquare }) => {
   return (
     <div className="Square" onClick={chooseSquare}>
       {val}

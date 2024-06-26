@@ -2,6 +2,7 @@ import "./NoughtsAndCrosses.css";
 import { useState, useEffect } from "react";
 import Square from "./Square";
 import { Patterns } from "./Patterns";
+import { v4 as uuidv4 } from "uuid";
 
 export default function NoughtsAndCrosses() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
@@ -77,10 +78,11 @@ export default function NoughtsAndCrosses() {
 
   return (
     <div className="NoughtsAndCrosses">
-      {board.map((key, idx) => (
+      {board.map((item, idx) => (
         <Square
           className="Square"
           idx={idx}
+          key={idx}
           val={board[idx]}
           chooseSquare={() => chooseSquare(idx)}
         />
