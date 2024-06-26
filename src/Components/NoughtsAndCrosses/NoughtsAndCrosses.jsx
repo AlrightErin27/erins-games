@@ -1,10 +1,22 @@
 import "./NoughtsAndCrosses.css";
-import { useState } from "react";
-import Square from "./Sqaure";
+import { useState, useEffect } from "react";
+import Square from "./Square";
+import { Patterns } from "./Patterns";
 
 export default function NoughtsAndCrosses() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
   const [player, setPlayer] = useState("X");
+  const [result, setResult] = useState({ winner: "none", state: "none" });
+
+  useEffect(() => {
+    checkWin();
+  }, [board]);
+
+  useEffect(() => {
+    if (result.state !== "none") {
+      console.log("WINNER:", result.winner, "GAME:", result.state);
+    }
+  }, [result]);
 
   const changePlayer = (currPlayer) => {
     currPlayer === "X" ? setPlayer("O") : setPlayer("X");
@@ -36,6 +48,31 @@ export default function NoughtsAndCrosses() {
         }
       })
     );
+  };
+
+  const checkWin = () => {
+    Patterns.forEach((currPattern) => {
+      //board at index of each pattern's index 0
+      //first pattern starts at index 0, so it looks at board's index 0
+      //2nd pattern starts at index 3, so check board index 3
+      const currPlayer = board[currPattern[0]];
+      if (currPlayer === "") return;
+      let foundWin = true;
+      currPattern.forEach((idx) => {
+        //looks through current pattern's 3 index's
+        // console.log("Current Pattern's idx", idx);
+
+        if (board[idx] !== currPlayer) {
+          //if the board at the curr index doesn't equal the player at the beginning of the pattern
+          // console.log("player", currPlayer, "board at index", board[idx]);
+          foundWin = false;
+        }
+      });
+
+      if (foundWin) {
+        setResult({ winner: currPlayer, state: "over" });
+      }
+    });
   };
 
   return (
