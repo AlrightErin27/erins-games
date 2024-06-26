@@ -1,7 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 /* font-family: "Rye", serif; */
 
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* font-family: "Cutive Mono", monospace; */
+
 .NoughtsAndCrosses {
+  display: flex;
+}
+.data {
+  height: 46rem;
+  width: 11rem;
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.data-text {
+  border: 0.5rem solid rgba(255, 235, 205, 0.552);
+  width: 95%;
+  height: 10%;
+  background-color: rgba(255, 235, 205, 0.259);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  text-align: center;
+}
+.data button {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.board {
   height: 46rem;
   width: 48rem;
   /* border: 1px solid black; */
