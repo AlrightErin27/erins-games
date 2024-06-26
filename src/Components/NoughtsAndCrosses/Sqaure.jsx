@@ -1,12 +1,7 @@
-const Square = ({ col, row, val, chooseSquare }) => {
+const Square = ({ squareId, val, chooseSquare }) => {
   return (
-    <div
-      onClick={() => {
-        console.log("Value:", val);
-      }}
-      className="board-square"
-    >
-      VAL {val}
+    <div onClick={() => chooseSquare()} className="Square">
+      {val}
     </div>
   );
 };

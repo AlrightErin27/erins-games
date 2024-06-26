@@ -15,7 +15,7 @@
   background-image: url("./images/evbDev.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 .dispayRoutes-navbar {

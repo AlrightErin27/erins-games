@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+/* font-family: "Rye", serif; */
+
 .NoughtsAndCrosses {
   /* border: 1px solid black; */
   display: flex;
@@ -6,7 +9,7 @@
   align-items: center;
   gap: 0.5rem;
 }
-.board-row {
+.row {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -14,16 +17,19 @@
   width: 100%;
   /* border: 1px red solid; */
 }
-.board-square {
-  background-color: rgba(240, 248, 255, 0.519);
+.Square {
+  background-color: rgba(99, 99, 12, 0.506);
   height: 15rem;
   width: 15rem;
   cursor: pointer;
   /* border: blue solid 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: rgb(83, 83, 8);
+  font-family: "Rye", serif;
 }
-.board-square:hover {
-  background-color: rgba(0, 255, 153, 0.241);
+.Square:hover {
+  background-color: rgba(99, 99, 12, 0.18);
 }
-/* .NoughtsAndCrosses button {
-  c
-} */
