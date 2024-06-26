@@ -7,7 +7,8 @@ export default function NoughtsAndCrosses() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
   const [player, setPlayer] = useState("X");
   const [result, setResult] = useState({ winner: "none", state: "in-play" });
-  const [score, setScore] = useState({ xWins: 0, oWins: 0 });
+  let [scoreX, setScoreX] = useState(0);
+  let [scoreO, setScoreO] = useState(0);
 
   useEffect(() => {
     const checkWin = () => {
@@ -31,9 +32,7 @@ export default function NoughtsAndCrosses() {
 
         if (foundWin) {
           setResult({ winner: currPlayer + " Won!", state: "Won" });
-          currPlayer === "X"
-            ? setScore({ xWins: ++score.xWins, oWins: score.oWins })
-            : setScore({ oWins: ++score.oWins, xWins: score.xWins });
+          currPlayer === "X" ? setScoreX(++scoreX) : setScoreO(++scoreO);
         }
       });
     };
@@ -149,9 +148,9 @@ export default function NoughtsAndCrosses() {
             </>
           )}
           <br />
-          Score X: {score.xWins}
+          Score X: {scoreX}
           <br />
-          Score O: {score.oWins}
+          Score O: {scoreO}
         </div>
       </div>
     </div>
