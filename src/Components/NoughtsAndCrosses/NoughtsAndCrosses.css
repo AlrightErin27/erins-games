@@ -13,15 +13,18 @@
   font-family: "Cutive Mono", monospace;
   font-size: 1.2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  /* border: solid pink 1px; */
 }
 .data-text {
-  border: 0.5rem solid rgba(255, 235, 205, 0.552);
+  /* border: 0.5rem solid rgba(255, 235, 205, 0.552); */
   width: 95%;
-  height: 10%;
+  height: 15%;
   background-color: rgba(255, 235, 205, 0.259);
-  border-radius: 0.9rem;
+  /* border-radius: 0.9rem; */
   padding: 1rem;
   text-align: center;
 }
@@ -29,6 +32,32 @@
   font-family: "Cutive Mono", monospace;
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+.winner-game-img {
+  height: 15rem;
+  width: 95%;
+  /* border: solid pink 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cats-game-img {
+  background-image: url("../../images/catsGame.png");
+  height: 15rem;
+  width: 95%;
+  /* border: solid pink 1px; */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.oWin-game-img {
+  font-size: 2.2rem;
+  font-family: "Rye", serif;
+  color: rgb(47, 47, 5);
+}
+.xWin-game-img {
+  font-size: 2.2rem;
+  font-family: "Rye", serif;
+  color: rgb(47, 47, 5);
 }
 .board {
   height: 46rem;
@@ -45,7 +74,6 @@
   height: 15rem;
   width: 15rem;
   cursor: pointer;
-  /* border: blue solid 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +83,9 @@
 }
 .Square:hover {
   background-color: rgba(99, 99, 12, 0.18);
+}
+.square-inactive {
+  background-color: rgba(99, 99, 12, 0.223);
+  height: 15rem;
+  width: 15rem;
 }

@@ -24,8 +24,8 @@
   color: rgb(0, 0, 0);
 }
 .NavBar li.active {
-  text-shadow: #6e6a56 1px 0 10px;
+  text-shadow: #ffbe6e 1px 0 10px;
 }
 .NavBar li:hover {
-  text-shadow: #ffbe6e 1px 0 10px;
+  text-shadow: #6e6a56 1px 0 10px;
 }

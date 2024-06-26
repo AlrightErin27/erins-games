@@ -1,8 +1,14 @@
-const Square = ({ idx, val, chooseSquare }) => {
+const Square = ({ idx, val, chooseSquare, state }) => {
   return (
-    <div className="Square" onClick={chooseSquare}>
-      {val}
-    </div>
+    <>
+      {state === "in-play" ? (
+        <div className="Square" onClick={chooseSquare}>
+          {val}
+        </div>
+      ) : (
+        <div className="square-inactive">{val}</div>
+      )}
+    </>
   );
 };
 

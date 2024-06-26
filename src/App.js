@@ -12,10 +12,10 @@ function App() {
       <div className="stripe">
         <div className="stripe-image"></div>
       </div>
-      <div className="dispayRoutes-navbar">
+      <div className="displayRoutes-navbar">
         <NavBar />
       </div>
-      <div className="dispayRoutes-components">
+      <div className="displayRoutes-components">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />

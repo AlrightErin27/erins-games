@@ -7,6 +7,7 @@ export default function NoughtsAndCrosses() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
   const [player, setPlayer] = useState("X");
   const [result, setResult] = useState({ winner: "none", state: "in-play" });
+  const [score, setScore] = useState({ xWins: 0, oWins: 0 });
 
   useEffect(() => {
     const checkWin = () => {
@@ -30,6 +31,9 @@ export default function NoughtsAndCrosses() {
 
         if (foundWin) {
           setResult({ winner: currPlayer + " Won!", state: "Won" });
+          currPlayer === "X"
+            ? setScore({ xWins: ++score.xWins, oWins: score.oWins })
+            : setScore({ oWins: ++score.oWins, xWins: score.xWins });
         }
       });
     };
@@ -51,7 +55,7 @@ export default function NoughtsAndCrosses() {
 
   useEffect(() => {
     if (result.state !== "none") {
-      console.log("WINNER:", result.winner, "GAME:", result.state);
+      console.log("RESULT:", result.winner, "GAME:", result.state);
       restartGame();
     }
   }, [result]);
@@ -93,6 +97,18 @@ export default function NoughtsAndCrosses() {
     setPlayer("X");
   };
 
+  const winImagesDisplay = () => {
+    if (result.winner === "Cat's Game") {
+      return <div className="cats-game-img" />;
+    } else if (result.winner === "X Won!") {
+      return <div className="xWin-game-img">X WINS!</div>;
+    } else if (result.winner === "O Won!") {
+      return <div className="oWin-game-img">O WINS!</div>;
+    } else {
+      return null;
+    }
+  };
+
   return (
     <div className="NoughtsAndCrosses">
       <div className="board">
@@ -102,29 +118,40 @@ export default function NoughtsAndCrosses() {
             idx={idx}
             key={idx}
             val={board[idx]}
-            chooseSquare={() => chooseSquare(idx)}
+            state={result.state}
+            chooseSquare={() => {
+              chooseSquare(idx);
+            }}
           />
         ))}
       </div>
       <div className="data">
+        <div className="winner-game-img">{winImagesDisplay()}</div>
+
         <div className="data-text">
-          <text>
-            {result.state === "in-play" ? (
-              <>Player : {player}</>
-            ) : (
-              <>
-                {result.winner}
-                <br />
-                <button
-                  onClick={() => {
-                    setResult({ winner: "none", state: "in-play" });
-                  }}
-                >
-                  Restart
-                </button>
-              </>
-            )}
-          </text>
+          {result.state === "in-play" ? (
+            <>
+              Player : {player}
+              <br />
+              <br />
+            </>
+          ) : (
+            <>
+              {result.winner}
+              <br />
+              <button
+                onClick={() => {
+                  setResult({ winner: "none", state: "in-play" });
+                }}
+              >
+                Restart
+              </button>
+            </>
+          )}
+          <br />
+          Score X: {score.xWins}
+          <br />
+          Score O: {score.oWins}
         </div>
       </div>
     </div>

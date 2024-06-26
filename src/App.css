@@ -18,10 +18,10 @@
   height: 100vh;
   width: 100%;
 }
-.dispayRoutes-navbar {
+.displayRoutes-navbar {
   height: 7vh;
 }
-.dispayRoutes-components {
+.displayRoutes-components {
   height: 92vh;
   /* border: red solid 1px; */
   display: flex;
