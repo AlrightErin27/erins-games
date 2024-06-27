@@ -1,6 +1,8 @@
+/* font for square's X's and O's */
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 /* font-family: "Rye", serif; */
 
+/* font for score data */
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* font-family: "Cutive Mono", monospace; */
 
@@ -17,14 +19,11 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  /* border: solid pink 1px; */
 }
 .data-text {
-  /* border: 0.5rem solid rgba(255, 235, 205, 0.552); */
   width: 95%;
   height: 15%;
   background-color: rgba(255, 235, 205, 0.259);
-  /* border-radius: 0.9rem; */
   padding: 1rem;
   text-align: center;
 }
@@ -36,7 +35,6 @@
 .winner-game-img {
   height: 15rem;
   width: 95%;
-  /* border: solid pink 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +43,6 @@
   background-image: url("../../images/catsGame.png");
   height: 15rem;
   width: 95%;
-  /* border: solid pink 1px; */
   background-size: contain;
   background-repeat: no-repeat;
 }

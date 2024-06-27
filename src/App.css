@@ -23,7 +23,6 @@
 }
 .displayRoutes-components {
   height: 92vh;
-  /* border: red solid 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
