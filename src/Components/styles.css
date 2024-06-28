@@ -91,6 +91,8 @@
 /* --------------    CONCENTRATION    -------------- */
 @import url("https://fonts.googleapis.com/css2?family=Aladin&family=Style+Script&display=swap");
 /* font-family: "Aladin", system-ui; */
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+/* font-family: "Allerta Stencil", sans-serif; */
 
 .Concentration {
   display: flex;
@@ -105,27 +107,35 @@
 .shuffle-btn {
   height: 8rem;
   width: 10rem;
-  font-family: "Aladin", system-ui;
-  font-size: 3rem;
+  font-family: "Cutive Mono", monospace;
+  font-size: 2rem;
   padding: 0 1rem 0 1rem;
-  border: 0.5rem black solid;
+  border: 0.5rem rgba(0, 0, 0, 0) solid;
   cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.373);
 }
 .shuffle-btn:hover {
-  background-color: azure;
-  border: grey 0.5rem solid;
-  color: grey;
+  background-color: rgba(255, 245, 240, 0.65);
+  color: rgba(2, 2, 2, 0.624);
 }
 .PlayerInfo {
   height: 4rem;
   /* background-color: rgba(165, 42, 42, 0.461); */
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
 }
 .board {
   height: 45rem;
   width: 100%;
-  /* background-color: rgba(142, 97, 97, 0.863); */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -133,9 +143,15 @@
   flex: 1;
   gap: 1rem;
   overflow: auto;
+  background-image: url("../images/wood.png");
+  filter: grayscale(70%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1rem;
 }
 .Card {
-  border: black solid 1px;
+  /* border: black solid 1px; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
   height: 27%;
   width: 10%;
   display: flex;
@@ -145,13 +161,13 @@
   background-color: antiquewhite;
   filter: grayscale(70%);
   cursor: pointer;
-  margin: 0.25rem;
+  margin: 0.1rem;
 }
 .Card:hover {
   filter: invert(10%);
 }
 .card-back {
-  background-image: url("../images/catsGame.png");
+  background-image: url("../images/card-back.png");
   height: 100%;
   width: 100%;
   background-size: contain;
