@@ -1,4 +1,4 @@
-import "./NoughtsAndCrosses.css";
+import "../styles.css";
 import { useState, useEffect } from "react";
 import Square from "./Square";
 import { Patterns } from "./Patterns";
@@ -32,7 +32,9 @@ export default function NoughtsAndCrosses() {
 
         if (foundWin) {
           setResult({ winner: currPlayer + " Won!", state: "Won" });
-          currPlayer === "X" ? setScoreX(++scoreX) : setScoreO(++scoreO);
+          currPlayer === "X"
+            ? setScoreX((scoreX) => scoreX + 1)
+            : setScoreO((scoreO) => scoreO + 1);
         }
       });
     };
@@ -110,7 +112,7 @@ export default function NoughtsAndCrosses() {
 
   return (
     <div className="NoughtsAndCrosses">
-      <div className="board">
+      <div className="nc-board">
         {board.map((item, idx) => (
           <Square
             className="Square"

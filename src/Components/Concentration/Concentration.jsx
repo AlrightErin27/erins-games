@@ -1,10 +1,23 @@
-import "./Concentration.css";
+import "../styles.css";
 import PlayerInfo from "./PlayerInfo";
 import Card from "./Card";
 import { useState, useEffect } from "react";
 
 export default function Concentration() {
-  const emojis = ["🗝", "🔔", "🎱", "🍁", "🐚", "🎩", "🧦", "🐌", "🪶"];
+  const emojis = [
+    "🗝",
+    "🔔",
+    "🎱",
+    "🍁",
+    "🐚",
+    "🎩",
+    "🧦",
+    "🐌",
+    "🪶",
+    "☕️",
+    "🍐",
+    "🐈‍⬛",
+  ];
   const [inPlay, setInPlay] = useState(false);
   const [cards, setCards] = useState([]);
 

@@ -1,3 +1,4 @@
+/* -------------- NOUGHTS AND CROSSES -------------- */
 /* font for square's X's and O's */
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 /* font-family: "Rye", serif; */
@@ -40,7 +41,7 @@
   align-items: center;
 }
 .cats-game-img {
-  background-image: url("../../images/catsGame.png");
+  background-image: url("../images/catsGame.png");
   height: 15rem;
   width: 95%;
   background-size: contain;
@@ -56,7 +57,7 @@
   font-family: "Rye", serif;
   color: rgb(47, 47, 5);
 }
-.board {
+.nc-board {
   height: 46rem;
   width: 48rem;
   /* border: 1px solid black; */
@@ -85,4 +86,78 @@
   background-color: rgba(99, 99, 12, 0.223);
   height: 15rem;
   width: 15rem;
+}
+
+/* --------------    CONCENTRATION    -------------- */
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Style+Script&display=swap");
+/* font-family: "Aladin", system-ui; */
+
+.Concentration {
+  display: flex;
+  flex-direction: column;
+  width: 67vw;
+  /* background-color: rgba(127, 255, 212, 0.165); */
+  height: 49rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.shuffle-btn {
+  height: 8rem;
+  width: 10rem;
+  font-family: "Aladin", system-ui;
+  font-size: 3rem;
+  padding: 0 1rem 0 1rem;
+  border: 0.5rem black solid;
+  cursor: pointer;
+}
+.shuffle-btn:hover {
+  background-color: azure;
+  border: grey 0.5rem solid;
+  color: grey;
+}
+.PlayerInfo {
+  height: 4rem;
+  /* background-color: rgba(165, 42, 42, 0.461); */
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.board {
+  height: 45rem;
+  width: 100%;
+  /* background-color: rgba(142, 97, 97, 0.863); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-auto-rows: auto;
+  flex: 1;
+  gap: 1rem;
+  overflow: auto;
+}
+.Card {
+  border: black solid 1px;
+  height: 27%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: antiquewhite;
+  filter: grayscale(70%);
+  cursor: pointer;
+  margin: 0.25rem;
+}
+.Card:hover {
+  filter: invert(10%);
+}
+.card-back {
+  background-image: url("../images/catsGame.png");
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: rgb(236, 209, 209);
+  filter: grayscale(70%);
+  opacity: 40%;
 }
