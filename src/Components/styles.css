@@ -103,22 +103,46 @@
   justify-content: center;
   align-items: center;
 }
-
-.shuffle-btn {
-  height: 8rem;
-  width: 10rem;
+.StartModal {
   font-family: "Cutive Mono", monospace;
   font-size: 2rem;
-  padding: 0 1rem 0 1rem;
-  border: 0.5rem rgba(0, 0, 0, 0) solid;
-  cursor: pointer;
+  height: 18vh;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StartModal form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9rem;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.373);
+  background-color: rgba(178, 168, 121, 0.854);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.327);
+  padding: 1rem;
 }
-.shuffle-btn:hover {
-  background-color: rgba(255, 245, 240, 0.65);
-  color: rgba(2, 2, 2, 0.624);
+.input-name {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.8rem;
+  background-color: rgba(231, 207, 189, 0.491);
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.327);
+  border-radius: 20px;
+  padding: 0.5rem;
 }
+.submit-btn {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(231, 207, 189, 0.673);
+  /* border: 1px rgba(0, 0, 0, 0.505) solid; */
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.327);
+}
+
 .PlayerInfo {
   height: 4rem;
   /* background-color: rgba(165, 42, 42, 0.461); */
