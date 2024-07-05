@@ -24,6 +24,9 @@ export default function Concentration() {
   const [inPlay, setInPlay] = useState(false);
   const [cards, setCards] = useState([]);
   const [playersName, setPlayersName] = useState("");
+  const [em1, setEm1] = useState("");
+  const [em2, setEm2] = useState("");
+  const [twoCardsUp, setTwoCardsUp] = useState(false);
 
   //refresh when change inPlay
   useEffect(() => {
@@ -47,6 +50,13 @@ export default function Concentration() {
     }
   }, [inPlay]);
 
+  if (twoCardsUp === true) {
+    console.log("Look for match");
+    if (em1 === em2) {
+      console.log("FOUND MATCH");
+    }
+  }
+
   return (
     <div className="Concentration">
       {inPlay === true ? (
@@ -54,7 +64,16 @@ export default function Concentration() {
           <PlayerInfo playersName={playersName} />
           <div className="board">
             {cards.map((card, idx) => (
-              <Card card={card} idx={idx} key={idx} />
+              <Card
+                card={card}
+                idx={idx}
+                key={idx}
+                em1={em1}
+                em2={em2}
+                setEm1={setEm1}
+                setEm2={setEm2}
+                setTwoCardsUp={setTwoCardsUp}
+              />
             ))}
           </div>
         </>

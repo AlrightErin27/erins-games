@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 import Concentration from "./Components/Concentration/Concentration";
+import MatchMe from "./Components/TEST/MatchMe";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           <Route path="/concentration" element={<Concentration />} />
+          <Route path="/match-me" element={<MatchMe />} />
         </Routes>
       </div>
     </div>

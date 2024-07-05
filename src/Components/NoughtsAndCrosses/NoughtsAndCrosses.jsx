@@ -138,8 +138,6 @@ export default function NoughtsAndCrosses() {
             </>
           ) : (
             <>
-              {result.winner}
-              <br />
               <button
                 onClick={() => {
                   setResult({ winner: "none", state: "in-play" });
@@ -147,6 +145,7 @@ export default function NoughtsAndCrosses() {
               >
                 Restart
               </button>
+              <br />
             </>
           )}
           <br />

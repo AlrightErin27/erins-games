@@ -89,21 +89,21 @@
 }
 
 /* --------------    CONCENTRATION    -------------- */
-@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Style+Script&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Aladin&family=Style+Script&display=swap"); */
 /* font-family: "Aladin", system-ui; */
-@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap"); */
 /* font-family: "Allerta Stencil", sans-serif; */
 
-.Concentration {
+/* .Concentration {
   display: flex;
   flex-direction: column;
   width: 67vw;
-  /* background-color: rgba(127, 255, 212, 0.165); */
+
   height: 49rem;
   justify-content: center;
   align-items: center;
-}
-.StartModal {
+} */
+/* .StartModal {
   font-family: "Cutive Mono", monospace;
   font-size: 2rem;
   height: 18vh;
@@ -121,8 +121,8 @@
   background-color: rgba(178, 168, 121, 0.854);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.327);
   padding: 1rem;
-}
-.input-name {
+} */
+/* .input-name {
   font-family: "Cutive Mono", monospace;
   font-size: 1.8rem;
   background-color: rgba(231, 207, 189, 0.491);
@@ -130,22 +130,22 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.327);
   border-radius: 20px;
   padding: 0.5rem;
-}
-.submit-btn {
+} */
+/* .submit-btn {
   font-family: "Cutive Mono", monospace;
   font-size: 1.4rem;
   border: none;
   cursor: pointer;
   background-color: rgba(231, 207, 189, 0.673);
-  /* border: 1px rgba(0, 0, 0, 0.505) solid; */
+
   padding: 1rem;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.327);
-}
+} */
 
-.PlayerInfo {
+/* .PlayerInfo {
   height: 4rem;
-  /* background-color: rgba(165, 42, 42, 0.461); */
+ 
   width: 100%;
   margin-bottom: 0.25rem;
   font-family: "Cutive Mono", monospace;
@@ -154,8 +154,8 @@
   justify-content: center;
   align-items: center;
   gap: 12rem;
-}
-.board {
+} */
+/* .board {
   height: 45rem;
   width: 100%;
   border-radius: 20px;
@@ -172,9 +172,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 1rem;
-}
-.Card {
-  /* border: black solid 1px; */
+} */
+/* .Card {
+
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
   height: 27%;
   width: 10%;
@@ -186,11 +186,11 @@
   filter: grayscale(70%);
   cursor: pointer;
   margin: 0.1rem;
-}
-.Card:hover {
+} */
+/* .Card:hover {
   filter: invert(10%);
-}
-.card-back {
+} */
+/* .card-back {
   background-image: url("../images/card-back.png");
   height: 100%;
   width: 100%;
@@ -200,4 +200,9 @@
   background-color: rgb(236, 209, 209);
   filter: grayscale(70%);
   opacity: 40%;
+} */
+/* -------------- MATCH ME -------------- */
+.MatchMe {
+}
+.Card {
 }
