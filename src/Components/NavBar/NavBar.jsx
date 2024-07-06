@@ -7,7 +7,7 @@ export default function Navbar() {
       <ul>
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
-        <CustomLink to="/concentration">Concentration</CustomLink>
+        {/* <CustomLink to="/concentration">Concentration</CustomLink> */}
         <CustomLink to="/match-me">Match Me</CustomLink>
       </ul>
     </nav>

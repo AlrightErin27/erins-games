@@ -1,0 +1,23 @@
+/* -------------- MATCH ME -------------- */
+.MatchMe {
+}
+.card-cont {
+  display: grid;
+  grid-template-columns: repeat();
+}
+.card-front {
+  display: block;
+  max-width: 100%;
+}
+.back {
+  width: 100px;
+  height: 200px;
+  border: solid black 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front {
+  width: 100px;
+  height: 200px;
+}
