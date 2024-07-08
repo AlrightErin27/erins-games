@@ -8,7 +8,8 @@ export default function Navbar() {
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
         {/* <CustomLink to="/concentration">Concentration</CustomLink> */}
-        <CustomLink to="/match-me">Match Me</CustomLink>
+        {/* <CustomLink to="/match-me">Match Me</CustomLink> */}
+        <CustomLink to="/memory">Memory</CustomLink>
       </ul>
     </nav>
   );

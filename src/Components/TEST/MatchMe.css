@@ -1,23 +1,25 @@
 /* -------------- MATCH ME -------------- */
-.MatchMe {
-}
-.card-cont {
+/* .MatchMe {
+  height: 80vh;
+  width: 80vw;
   display: grid;
-  grid-template-columns: repeat();
+  place-items: center;
 }
-.card-front {
-  display: block;
-  max-width: 100%;
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.back {
-  width: 100px;
-  height: 200px;
-  border: solid black 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 9rem;
+  height: 9rem;
+  place-items: center;
+  cursor: pointer;
+  font-size: 3rem;
 }
-.front {
-  width: 100px;
-  height: 200px;
-}
+
+.side {
+
+  pointer-events: none;
+} */

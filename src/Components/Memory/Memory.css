@@ -1,0 +1,25 @@
+.Memory {
+  background-color: rgba(108, 122, 86, 0.839);
+  height: 80vh;
+  width: 80vw;
+}
+.cards-cont {
+  height: 85%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.GameInfo {
+  background-color: rgba(128, 128, 128, 0.356);
+  height: 15%;
+}
+.Card {
+  height: 60%;
+  width: 30%;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.face-up {
+  pointer-events: none;
+}
