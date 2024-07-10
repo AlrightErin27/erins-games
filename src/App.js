@@ -4,9 +4,7 @@ import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
-// import Concentration from "./Components/Concentration/Concentration";
-// import MatchMe from "./Components/TEST/MatchMe";
-import Memory from "./Components/Memory/Memory";
+import MagicMatch from "./Components/MagicMatch/MagicMatch";
 
 function App() {
   return (
@@ -23,7 +21,8 @@ function App() {
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           {/* <Route path="/concentration" element={<Concentration />} /> */}
           {/* <Route path="/match-me" element={<MatchMe />} /> */}
-          <Route path="/memory" element={<Memory />} />
+          {/* <Route path="/memory" element={<Memory />} /> */}
+          <Route path="/magic-match" element={<MagicMatch />} />
         </Routes>
       </div>
     </div>
