@@ -1,0 +1,51 @@
+.tic-tac-toe {
+  height: 50rem;
+  width: 70rem;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-cont {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+.cell-empty {
+  height: 32%;
+  background-color: rgb(190, 190, 139);
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.cell-full {
+  height: 32%;
+  background-color: rgba(52, 17, 34, 0.395);
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  font-size: 3rem;
+  color: white;
+  pointer-events: none;
+}
+.game-info {
+  height: 70%;
+  width: 20%;
+  background-color: rgba(128, 128, 128, 0.261);
+}

@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 import MagicMatch from "./Components/MagicMatch/MagicMatch";
+import TicTacToe from "./Components/TicTacToe/TicTacToe";
 
 function App() {
   return (
@@ -19,10 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
-          {/* <Route path="/concentration" element={<Concentration />} /> */}
-          {/* <Route path="/match-me" element={<MatchMe />} /> */}
-          {/* <Route path="/memory" element={<Memory />} /> */}
           <Route path="/magic-match" element={<MagicMatch />} />
+          <Route path="/tic-tac-toe" element={<TicTacToe />} />
         </Routes>
       </div>
     </div>

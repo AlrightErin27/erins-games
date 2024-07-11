@@ -8,6 +8,7 @@ export default function Navbar() {
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
         <CustomLink to="/magic-match">Magic Match</CustomLink>
+        <CustomLink to="/tic-tac-toe">Tic Tac Toe</CustomLink>
       </ul>
     </nav>
   );
