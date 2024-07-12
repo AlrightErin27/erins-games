@@ -6,7 +6,6 @@ export default function Navbar() {
     <nav className="NavBar">
       <ul>
         <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
         <CustomLink to="/magic-match">Magic Match</CustomLink>
         <CustomLink to="/tic-tac-toe">Tic Tac Toe</CustomLink>
       </ul>

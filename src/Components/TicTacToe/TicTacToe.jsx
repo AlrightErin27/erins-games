@@ -8,7 +8,9 @@ export default function TicTacToe() {
   const [cells, setCells] = useState([]);
   const [numCellsFilled, setNumCellsFilled] = useState(0);
   const [foundWin, setFoundWin] = useState(false);
-  const [winner, setWinner] = useState("none");
+  const [roundsPlayed, setRoundsPlayed] = useState(0);
+  const [xWins, setXWins] = useState(0);
+  const [oWins, setOWins] = useState(0);
 
   const startGame = () => {
     setFoundWin(false);
@@ -106,10 +108,16 @@ export default function TicTacToe() {
 
   //checks if there's a winner an sets the state
   const handleWinner = (Y) => {
-    setWinner(Y);
+    if (Y === "X") {
+      setXWins(() => xWins + 1);
+    }
+    if (Y === "O") {
+      setOWins(() => oWins + 1);
+    }
     setFoundWin(true);
     setNumCellsFilled(0);
     setPlayer("X");
+    setRoundsPlayed(() => roundsPlayed + 1);
   };
 
   //Cat's Game check win
@@ -117,9 +125,6 @@ export default function TicTacToe() {
     checkForWins("X");
     checkForWins("O");
     if (!foundWin) {
-      //   setWinner("Cat's Game");
-      //   setFoundWin(true);
-      //   setNumCellsFilled(0);
       handleWinner("Cat's Game");
     }
   }
@@ -139,7 +144,12 @@ export default function TicTacToe() {
           ))}
         </div>
       </div>
-      <GameInfo player={player} winner={winner} />
+      <GameInfo
+        player={player}
+        roundsPlayed={roundsPlayed}
+        xWins={xWins}
+        oWins={oWins}
+      />
     </div>
   );
 }

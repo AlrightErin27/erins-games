@@ -1,10 +1,19 @@
+/* -------------- NOUGHTS AND CROSSES -------------- */
+/* font for square's X's and O's */
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+/* font-family: "Rye", serif; */
+
+/* font for score data */
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* font-family: "Cutive Mono", monospace; */
+
 .tic-tac-toe {
   height: 50rem;
-  width: 70rem;
+  width: 60rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
 }
 .board-cont {
@@ -13,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 3rem;
 }
 .board {
   height: 40rem;
@@ -24,7 +34,7 @@
 }
 .cell-empty {
   height: 32%;
-  background-color: rgb(190, 190, 139);
+  background-color: rgba(93, 93, 76, 0.148);
   width: 32%;
   display: flex;
   justify-content: center;
@@ -32,20 +42,38 @@
   padding-top: 3px;
   cursor: pointer;
 }
+.cell-empty:hover {
+  background-color: rgba(93, 93, 76, 0.408);
+}
 .cell-full {
+  font-family: "Rye", serif;
   height: 32%;
-  background-color: rgba(52, 17, 34, 0.395);
   width: 32%;
+  padding-top: 3px;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.845);
+  font-size: 5.5rem;
+}
+.O-cell {
+  background-color: rgba(205, 185, 156, 0.414);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3px;
-  font-size: 3rem;
-  color: white;
-  pointer-events: none;
+  height: 100%;
+  width: 100%;
+}
+.X-cell {
+  background-color: rgba(215, 215, 188, 0.414);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .game-info {
   height: 70%;
-  width: 20%;
-  background-color: rgba(128, 128, 128, 0.261);
+  width: 100%;
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.5rem;
+  text-align: center;
 }

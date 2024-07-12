@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
-import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 import MagicMatch from "./Components/MagicMatch/MagicMatch";
 import TicTacToe from "./Components/TicTacToe/TicTacToe";
 
@@ -19,7 +18,6 @@ function App() {
       <div className="displayRoutes-components">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           <Route path="/magic-match" element={<MagicMatch />} />
           <Route path="/tic-tac-toe" element={<TicTacToe />} />
         </Routes>
