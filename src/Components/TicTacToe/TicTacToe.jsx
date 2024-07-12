@@ -25,9 +25,6 @@ export default function TicTacToe() {
       { mark: "", local: 9 },
     ].map((cell) => ({ ...cell, id: Math.random() }));
     setCells(emptyCells);
-
-    //set player to X
-    setPlayer("X");
   };
 
   //start game automatically
@@ -53,11 +50,34 @@ export default function TicTacToe() {
   //if all cells are filled in state, depending on current player, check board for wins
   //changes when a cell is changed aka clicked
   useEffect(() => {
+    const checkForWins = (Y) => {
+      //check only for wins horizontal
+      if (
+        (cells[0].mark === Y && cells[1].mark === Y && cells[2].mark === Y) ||
+        (cells[3].mark === Y && cells[4].mark === Y && cells[5].mark === Y) ||
+        (cells[6].mark === Y && cells[7].mark === Y && cells[8].mark === Y)
+      ) {
+        handleWinner(Y);
+      } else if (
+        //check only for wins vertical
+        (cells[0].mark === Y && cells[3].mark === Y && cells[6].mark === Y) ||
+        (cells[1].mark === Y && cells[4].mark === Y && cells[7].mark === Y) ||
+        (cells[2].mark === Y && cells[5].mark === Y && cells[8].mark === Y)
+      ) {
+        handleWinner(Y);
+      } else if (
+        //check only for wins diagonal
+        (cells[0].mark === Y && cells[4].mark === Y && cells[8].mark === Y) ||
+        (cells[2].mark === Y && cells[4].mark === Y && cells[6].mark === Y)
+      ) {
+        handleWinner(Y);
+      }
+    };
     //runs check for wins fx with input dependant on current player
     if (cells[8]) {
       player === "X" ? checkForWins("O") : checkForWins("X");
     }
-  }, [cells]);
+  }, [cells, player]);
 
   //check input var for winning patterns in cells array
   const checkForWins = (Y) => {
@@ -89,6 +109,7 @@ export default function TicTacToe() {
     setWinner(Y);
     setFoundWin(true);
     setNumCellsFilled(0);
+    setPlayer("X");
   };
 
   //Cat's Game check win
