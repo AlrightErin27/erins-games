@@ -1,4 +1,4 @@
-import "./TicTacToe.css";
+import "./NoughtsAndCrosses.css";
 
 export default function Cell({ cell, handleCellClick }) {
   const handleClick = () => {

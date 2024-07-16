@@ -1,9 +1,9 @@
-import "./TicTacToe.css";
+import "./NoughtsAndCrosses.css";
 import { useState, useEffect } from "react";
 import Cell from "./Cell";
 import GameInfo from "./GameInfo";
 
-export default function TicTacToe() {
+export default function NoughtsAndCrosses() {
   const [player, setPlayer] = useState("X");
   const [cells, setCells] = useState([]);
   const [numCellsFilled, setNumCellsFilled] = useState(0);
@@ -131,12 +131,12 @@ export default function TicTacToe() {
 
   useEffect(() => {
     if (foundWin) {
-      setTimeout(() => startGame(), 1000);
+      setTimeout(() => startGame(), 1800);
     }
   }, [foundWin]);
 
   return (
-    <div className="tic-tac-toe">
+    <div className="noughts-and-crosses">
       <div className="board-cont">
         <div className="board">
           {cells.map((cell) => (

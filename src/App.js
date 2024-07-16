@@ -4,7 +4,7 @@ import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import MagicMatch from "./Components/MagicMatch/MagicMatch";
-import TicTacToe from "./Components/TicTacToe/TicTacToe";
+import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/magic-match" element={<MagicMatch />} />
-          <Route path="/tic-tac-toe" element={<TicTacToe />} />
+          <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
         </Routes>
       </div>
     </div>
