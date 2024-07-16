@@ -22,10 +22,7 @@ export default function Card({
           {card.emoji}
         </div>
       ) : (
-        <div className="card-back" alt="card back" onClick={handleClick}>
-          🪩
-          {/* <h5>{card.emoji}</h5> */}
-        </div>
+        <div className="card-back" alt="card back" onClick={handleClick}></div>
       )}
     </div>
   );

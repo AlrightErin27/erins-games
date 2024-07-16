@@ -10,6 +10,9 @@ const cardEmojis = [
   { emoji: "🗝", matched: false },
   { emoji: "🧦", matched: false },
   { emoji: "🍁", matched: false },
+  { emoji: "🪐", matched: false },
+  { emoji: "🐌", matched: false },
+  { emoji: "🍄‍🟫", matched: false },
 ];
 
 export default function MagicMatch() {
@@ -57,7 +60,7 @@ export default function MagicMatch() {
     } else if (selectOne && selectTwo) {
       setDisabled(true);
       //if no match found, pause a second before resetting selects and +1 to turn
-      setTimeout(() => resetSelectsAndUpdateTurn(), 1000);
+      setTimeout(() => resetSelectsAndUpdateTurn(), 1900);
     }
   }, [selectOne, selectTwo]);
 
@@ -75,8 +78,6 @@ export default function MagicMatch() {
 
   return (
     <div className="MagicMatch">
-      <br />
-      MAGIC MATCH
       <div className="card-grid">
         {cards.map((card) => (
           <Card
