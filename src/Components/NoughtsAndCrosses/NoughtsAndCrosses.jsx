@@ -52,6 +52,19 @@ export default function NoughtsAndCrosses() {
   //if all cells are filled in state, depending on current player, check board for wins
   //changes when a cell is changed aka clicked
   useEffect(() => {
+    const handleWinner = (Y) => {
+      if (Y === "X") {
+        setXWins((y) => y + 1);
+      }
+      if (Y === "O") {
+        setOWins((y) => y + 1);
+      }
+      setFoundWin(true);
+      setNumCellsFilled(0);
+      setPlayer("X");
+      setRoundsPlayed((y) => y + 1);
+    };
+
     const checkForWins = (Y) => {
       //check only for wins horizontal
       if (
