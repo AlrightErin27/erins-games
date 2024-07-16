@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* font-family: "Cutive Mono", monospace; */
 
-.MagicMatch {
+.Concentration {
   /* margin: 20px auto; */
   font-size: 1.5em;
   /* background-color: rgba(79, 127, 120, 0.72); */
@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Cutive Mono", monospace;
-  filter: invert(0.17);
+  /* filter: invert(0.17); */
 }
 .game-data {
   display: flex;
@@ -73,6 +73,7 @@
   width: 100%;
   cursor: default;
   background-color: rgba(31, 118, 130, 0.869);
+  filter: invert(0.13);
 }
 .card-front-matched {
   display: flex;
@@ -81,7 +82,8 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgb(40, 143, 143);
+  background-color: rgb(24, 91, 91);
+  filter: invert(0.13);
   cursor: default;
 }
 .card-back {

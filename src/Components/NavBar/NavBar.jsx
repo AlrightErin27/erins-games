@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="NavBar">
       <ul>
         <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/magic-match">Magic Match</CustomLink>
+        <CustomLink to="/concentration">Concentration</CustomLink>
         <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
       </ul>
     </nav>

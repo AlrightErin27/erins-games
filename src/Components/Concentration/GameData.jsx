@@ -1,4 +1,4 @@
-import "./MagicMatch.css";
+import "./Concentration.css";
 
 export default function GameData({ turns, handleRestart }) {
   return (

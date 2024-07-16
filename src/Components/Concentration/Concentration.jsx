@@ -1,4 +1,4 @@
-import "./MagicMatch.css";
+import "./Concentration.css";
 import { useState, useEffect } from "react";
 import Card from "./Card";
 import GameData from "./GameData";
@@ -15,7 +15,7 @@ const cardEmojis = [
   { emoji: "🍄‍🟫", matched: false },
 ];
 
-export default function MagicMatch() {
+export default function Concentration() {
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(null);
   const [selectOne, setSelectOne] = useState(null);
@@ -77,7 +77,7 @@ export default function MagicMatch() {
   }, []);
 
   return (
-    <div className="MagicMatch">
+    <div className="Concentration">
       <div className="card-grid">
         {cards.map((card) => (
           <Card

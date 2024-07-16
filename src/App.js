@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
-import MagicMatch from "./Components/MagicMatch/MagicMatch";
+import Concentration from "./Components/Concentration/Concentration";
 import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <div className="displayRoutes-components">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/magic-match" element={<MagicMatch />} />
+          <Route path="/concentration" element={<Concentration />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
         </Routes>
       </div>
