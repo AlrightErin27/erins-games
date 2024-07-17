@@ -1,13 +1,25 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./NavBar.css";
 
-export default function Navbar() {
+export default function Navbar({ handleShop, handleNoShop }) {
   return (
     <nav className="NavBar">
       <ul>
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/concentration">Concentration</CustomLink>
-        <CustomLink to="/noughts-&-crosses">Noughts & Crosses</CustomLink>
+        <CustomLink to="/" onClick={handleNoShop}>
+          Home
+        </CustomLink>
+        <CustomLink to="/concentration" onClick={handleNoShop}>
+          Concentration
+        </CustomLink>
+        <CustomLink to="/noughts-&-crosses" onClick={handleNoShop}>
+          Noughts & Crosses
+        </CustomLink>
+        <CustomLink to="/shop" onClick={handleShop}>
+          Shop
+        </CustomLink>
+        <CustomLink to="/crossword" onClick={handleNoShop}>
+          Crossword
+        </CustomLink>
       </ul>
     </nav>
   );
