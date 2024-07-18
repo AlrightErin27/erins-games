@@ -4,15 +4,18 @@ import Card from "./Card";
 import GameData from "./GameData";
 
 const cardEmojis = [
-  { emoji: "🦢", matched: false },
-  { emoji: "🎱", matched: false },
-  { emoji: "🔔", matched: false },
-  { emoji: "🗝", matched: false },
-  { emoji: "🧦", matched: false },
-  { emoji: "🍁", matched: false },
-  { emoji: "🪐", matched: false },
-  { emoji: "🐌", matched: false },
-  { emoji: "🍄‍🟫", matched: false },
+  { emoji: "🦢", matched: false, color: "rgb(141, 16, 16)" },
+  { emoji: "🎱", matched: false, color: "rgb(183, 135, 135)" },
+  { emoji: "🔔", matched: false, color: "rgb(221, 214, 214)" },
+  { emoji: "🗝", matched: false, color: "rgb(185, 163, 91)" },
+  { emoji: "🧦", matched: false, color: "rgb(177, 127, 52)" },
+  { emoji: "🍁", matched: false, color: "rgb(86, 14, 14)" },
+  { emoji: "🪐", matched: false, color: "rgb(11, 71, 81)" },
+  { emoji: "🐌", matched: false, color: "rgb(136, 169, 136)" },
+  { emoji: "🍄‍🟫", matched: false, color: "rgb(168, 48, 48)" },
+  { emoji: "🎻", matched: false, color: "rgb(101, 82, 89)" },
+  { emoji: "🕯", matched: false, color: "rgb(132, 89, 60)" },
+  { emoji: "🎠", matched: false, color: "rgb(129, 44, 44)" },
 ];
 
 export default function Concentration() {

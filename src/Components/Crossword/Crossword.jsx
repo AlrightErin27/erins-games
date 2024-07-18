@@ -2,6 +2,7 @@ import "./Crossword.css";
 import { useState, useEffect } from "react";
 
 import Box from "./Box";
+import Questions from "./Questions";
 
 export default function CrossWord() {
   const [boxes, setBoxes] = useState([]);
@@ -12,6 +13,7 @@ export default function CrossWord() {
       emptyArr.push({
         letter: "",
         black: true,
+        corner: "",
         idx: i,
         id: Math.random() - 0.5,
       });
@@ -31,9 +33,9 @@ export default function CrossWord() {
       ) {
         return { ...box, letter: "a", black: false };
       } else if (
-        box.idx === 125 ||
         box.idx === 77 ||
         box.idx === 235 ||
+        box.idx === 125 ||
         box.idx === 118 ||
         box.idx === 70
       ) {
@@ -188,7 +190,88 @@ export default function CrossWord() {
         return box;
       }
     });
-    setBoxes(filledArr);
+    let numberedArr = filledArr.map((box) => {
+      if (box.idx === 125) {
+        //blacksmith
+        //bronn
+        return { ...box, corner: "1" };
+      } else if (box.idx === 180) {
+        //dragonglass
+        //dragons
+        return { ...box, corner: "2" };
+      } else if (box.idx === 227) {
+        //arya
+        return { ...box, corner: "3" };
+      } else if (box.idx === 233) {
+        //debts
+        return { ...box, corner: "4" };
+      } else if (box.idx === 32) {
+        //fire
+        return { ...box, corner: "5" };
+      } else if (box.idx === 113) {
+        //crossbow
+        return { ...box, corner: "6" };
+      } else if (box.idx === 39) {
+        //walder
+        return { ...box, corner: "7" };
+      } else if (box.idx === 305) {
+        //night
+        return { ...box, corner: "8" };
+      } else if (box.idx === 69) {
+        //oberyn
+        return { ...box, corner: "9" };
+      } else if (box.idx === 316) {
+        //ice
+        return { ...box, corner: "10" };
+      } else if (box.idx === 268) {
+        //door
+        //die
+        return { ...box, corner: "11" };
+      } else if (box.idx === 219) {
+        //needle
+        return { ...box, corner: "12" };
+      } else if (box.idx === 77) {
+        //bear
+        return { ...box, corner: "13" };
+      } else if (box.idx === 202) {
+        //lady
+        return { ...box, corner: "14" };
+      } else if (box.idx === 81) {
+        //sam
+        return { ...box, corner: "15" };
+      } else if (box.idx === 9) {
+        //ironthrone
+        return { ...box, corner: "16" };
+      } else if (box.idx === 89) {
+        //greyscale
+        return { ...box, corner: "17" };
+      } else if (box.idx === 19) {
+        //drogo
+        return { ...box, corner: "18" };
+      } else if (box.idx === 118) {
+        //boar
+        return { ...box, corner: "19" };
+      } else if (box.idx === 120) {
+        //westeros
+        return { ...box, corner: "20" };
+      } else if (box.idx === 48) {
+        //tywin
+        return { ...box, corner: "21" };
+      } else if (box.idx === 199) {
+        //sept
+        return { ...box, corner: "22" };
+      } else if (box.idx === 237) {
+        //sand
+        return { ...box, corner: "23" };
+      } else {
+        return box;
+      }
+    });
+    setBoxes(numberedArr);
+  };
+
+  const clickBox = (num) => {
+    console.log("box #:", num);
   };
 
   useEffect(() => {
@@ -196,10 +279,15 @@ export default function CrossWord() {
   }, []);
   return (
     <div className="crossword">
-      <div className="puzzle-grid">
-        {boxes.map((box) => (
-          <Box key={box.id} box={box} />
-        ))}
+      <div className="crossword-cont">
+        <div className="puzzle-grid-cont">
+          <div className="puzzle-grid">
+            {boxes.map((box) => (
+              <Box key={box.id} box={box} clickBox={clickBox} />
+            ))}
+          </div>
+        </div>
+        <Questions />
       </div>
     </div>
   );

@@ -17,6 +17,9 @@ export default function Card({
       {faceUp ? (
         <div
           className={!matched ? "card-front" : "card-front-matched"}
+          style={
+            matched ? { backgroundColor: card.color } : { backgroundColor: "" }
+          }
           alt="card front"
         >
           {card.emoji}

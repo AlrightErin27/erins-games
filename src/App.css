@@ -25,10 +25,10 @@ body {
 .shop-background {
 }
 .displayRoutes-navbar {
-  height: 7vh;
+  height: 3rem;
 }
 .displayRoutes-components {
-  height: 92vh;
+  height: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
