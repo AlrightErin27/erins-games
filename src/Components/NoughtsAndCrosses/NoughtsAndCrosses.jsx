@@ -11,9 +11,11 @@ export default function NoughtsAndCrosses() {
   const [roundsPlayed, setRoundsPlayed] = useState(0);
   const [xWins, setXWins] = useState(0);
   const [oWins, setOWins] = useState(0);
+  const [catsGame, setCatsGame] = useState(false);
 
   const startGame = () => {
     setFoundWin(false);
+    setCatsGame(false);
     //set cells into state using emptyCells
     const emptyCells = [
       { mark: "", local: 1 },
@@ -138,7 +140,9 @@ export default function NoughtsAndCrosses() {
     checkForWins("X");
     checkForWins("O");
     if (!foundWin) {
+      setCatsGame(true);
       handleWinner("Cat's Game");
+      // console.log("CATS GAME");
     }
   }
 
@@ -151,6 +155,7 @@ export default function NoughtsAndCrosses() {
   return (
     <div className="noughts-and-crosses">
       <div className="board-cont">
+        {catsGame ? <div className="cats-game"></div> : null}
         <div className="board">
           {cells.map((cell) => (
             <Cell cell={cell} key={cell.id} handleCellClick={handleCellClick} />

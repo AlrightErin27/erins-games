@@ -24,6 +24,17 @@
   align-items: center;
   padding-top: 3rem;
 }
+.cats-game {
+  /* border: solid 4px red; */
+  height: 25rem;
+  width: 25rem;
+  position: absolute;
+  background-image: url("../../images/catsGame.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+}
 .board {
   height: 40rem;
   width: 40rem;
