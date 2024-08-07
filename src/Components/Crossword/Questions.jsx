@@ -36,7 +36,7 @@ export default function Questions() {
         <div className="q-txt">17. Disease contracted by Jorah Mormot</div>
       </div>
       <div className="column">
-        <h3>Down</h3>
+        <h3></h3>
         {/* <br /> */}
         <div className="q-txt">18. Daenery's husband, Khal ___</div>
         <div className="q-txt">19. Animal that killed King Robert</div>

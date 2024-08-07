@@ -1,8 +1,14 @@
 import "./Crossword.css";
 import { useState, useEffect } from "react";
-
+import KeyButton from "./KeyButton";
 import Box from "./Box";
 import Questions from "./Questions";
+
+//* Answer key
+//*jump to next box when typing (from left to right) 🪲🪲🪲
+//*celebrate ending
+//*double click box for answer ✅✅✅
+//CSS styling ✅✅✅
 
 export default function CrossWord() {
   const [boxes, setBoxes] = useState([]);
@@ -270,8 +276,11 @@ export default function CrossWord() {
     setBoxes(numberedArr);
   };
 
-  const clickBox = (num) => {
-    console.log("box #:", num);
+  const clickBox = (num, isBlack, letter) => {
+    if (!isBlack) {
+      // console.log("#:", num, "*LETTER:", letter);
+      // console.log("horizon:", hor, "vertical:", vert);
+    }
   };
 
   useEffect(() => {
@@ -288,6 +297,7 @@ export default function CrossWord() {
           </div>
         </div>
         <Questions />
+        <KeyButton />
       </div>
     </div>
   );
