@@ -1,7 +1,6 @@
 import "./Crossword.css";
 import { useState } from "react";
 import Popup from "reactjs-popup";
-// import Answers from "./CrosswordAnswers";
 
 export default function Questions() {
   const [keyClicked, setKeyClicked] = useState(false);

@@ -8,7 +8,7 @@ import Questions from "./Questions";
 //*jump to next box when typing (from left to right) 🪲🪲🪲
 //*celebrate ending
 //*double click box for answer ✅✅✅
-//CSS styling ✅✅✅
+//CSS styling
 
 export default function CrossWord() {
   const [boxes, setBoxes] = useState([]);

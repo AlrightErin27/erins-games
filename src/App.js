@@ -8,7 +8,6 @@ import Concentration from "./Components/Concentration/Concentration";
 import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 import Shop from "./Components/Shop/Shop";
 import Crossword from "./Components/Crossword/Crossword";
-import CrosswordAnswers from "./Components/Crossword/CrosswordAnswers";
 
 function App() {
   const [viewShop, setViewShop] = useState(false);
@@ -40,7 +39,6 @@ function App() {
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/crossword" element={<Crossword />} />
-          <Route path="/crossword-answers" element={<CrosswordAnswers />} />
         </Routes>
       </div>
     </div>

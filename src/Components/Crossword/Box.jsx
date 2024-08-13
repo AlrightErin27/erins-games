@@ -1,8 +1,11 @@
 import "./Crossword.css";
 import { useState, useEffect } from "react";
+import { emulateTab } from "emulate-tab";
+import { useActionData } from "react-router-dom";
 
 export default function Box({ box, clickBox }) {
   const [userText, setUserText] = useState("");
+
   const [boxCorrect, setBoxCorrect] = useState(false);
   const [cheat, setCheat] = useState(null);
 
@@ -14,12 +17,20 @@ export default function Box({ box, clickBox }) {
     console.log("cheater!", cheat);
   };
 
+  const userBackSpace = (e) => {
+    if (e.code === "Backspace") {
+      console.log("FOUND BACKSPACE");
+      emulateTab.backwards();
+    }
+  };
+
   useEffect(() => {
     if (userText !== "") {
       // console.log(userText);
       if (userText === box.letter || userText.toLowerCase() === box.letter) {
         setBoxCorrect(true);
       }
+      emulateTab();
     }
   }, [userText, box.letter, setUserText]);
 
@@ -40,6 +51,7 @@ export default function Box({ box, clickBox }) {
             value={userText}
             maxLength={1}
             onChange={(e) => setUserText(e.target.value)}
+            onKeyDownCapture={(e) => userBackSpace(e)}
             onDoubleClickCapture={() => doubleClick()}
             className={!boxCorrect ? "lower-box" : "correct-lower-box"}
           />
