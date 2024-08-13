@@ -1,6 +1,6 @@
 import "./Crossword.css";
 import { useState, useEffect } from "react";
-import KeyButton from "./KeyButton";
+
 import Box from "./Box";
 import Questions from "./Questions";
 
@@ -289,6 +289,9 @@ export default function CrossWord() {
   return (
     <div className="crossword">
       <div className="crossword-cont">
+        <br />
+        <br />
+        <h1>A Song Of Ice & Fire Crossword</h1>
         <div className="puzzle-grid-cont">
           <div className="puzzle-grid">
             {boxes.map((box) => (
@@ -297,7 +300,6 @@ export default function CrossWord() {
           </div>
         </div>
         <Questions />
-        <KeyButton />
       </div>
     </div>
   );
