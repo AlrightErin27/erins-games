@@ -86,8 +86,8 @@
 }
 
 .corner-num {
-  height: 16px;
-  width: 16px;
+  height: 15px;
+  width: 15px;
   font-size: 14px;
   border-right: black 0.3px solid;
   border-bottom: black 0.3px solid;

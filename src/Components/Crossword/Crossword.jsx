@@ -1,13 +1,9 @@
 import "./Crossword.css";
 import { useState, useEffect } from "react";
-
 import Box from "./Box";
 import Questions from "./Questions";
 
-//* Answer key
 //*jump to next box when typing (from left to right) 🪲🪲🪲
-//*celebrate ending
-//*double click box for answer ✅✅✅
 //CSS styling
 
 export default function CrossWord() {

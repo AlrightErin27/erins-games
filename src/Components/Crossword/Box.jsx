@@ -1,7 +1,6 @@
 import "./Crossword.css";
 import { useState, useEffect } from "react";
 import { emulateTab } from "emulate-tab";
-import { useActionData } from "react-router-dom";
 
 export default function Box({ box, clickBox }) {
   const [userText, setUserText] = useState("");
@@ -18,8 +17,9 @@ export default function Box({ box, clickBox }) {
   };
 
   const userBackSpace = (e) => {
+    console.log(e);
     if (e.code === "Backspace") {
-      console.log("FOUND BACKSPACE");
+      // console.log("FOUND BACKSPACE");
       emulateTab.backwards();
     }
   };
