@@ -21,6 +21,7 @@ export default function Box({ box, clickBox }) {
     if (e.code === "Backspace") {
       // console.log("FOUND BACKSPACE");
       emulateTab.backwards();
+      console.log(emulateTab);
     }
   };
 

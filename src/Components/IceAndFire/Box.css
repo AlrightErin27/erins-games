@@ -1,0 +1,15 @@
+.box {
+  height: 3rem;
+  width: 3rem;
+  border: 1px white solid;
+}
+.letter {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgb(233, 220, 220);
+}
+.black {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgb(0, 0, 0);
+}
