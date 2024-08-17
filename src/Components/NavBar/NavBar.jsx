@@ -11,6 +11,9 @@ export default function Navbar({ handleShop, handleNoShop }) {
         <CustomLink to="/concentration" onClick={handleNoShop}>
           Concentration
         </CustomLink>
+        <CustomLink to="/blog" onClick={handleShop}>
+          Blog
+        </CustomLink>
         <CustomLink to="/noughts-&-crosses" onClick={handleNoShop}>
           Noughts & Crosses
         </CustomLink>

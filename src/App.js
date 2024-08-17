@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
+import Blog from "./Components/Blog/Blog";
 import Concentration from "./Components/Concentration/Concentration";
 import NoughtsAndCrosses from "./Components/NoughtsAndCrosses/NoughtsAndCrosses";
 import Shop from "./Components/Shop/Shop";
@@ -36,6 +37,7 @@ function App() {
       <div className="displayRoutes-components">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/concentration" element={<Concentration />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           <Route path="/shop" element={<Shop />} />
