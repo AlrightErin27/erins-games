@@ -4,37 +4,150 @@ import Box from "./Box";
 
 export default function IceAndFire() {
   const lettersArr = [
-    { char: "b", word: "banana", idx: 5, vert: 5, hor: 5 },
-    { char: "a", word: "banana", idx: 6, vert: false, hor: true },
-    { char: "n", word: "banana", idx: 7, vert: false, hor: true },
-    { char: "a", word: "banana", idx: 8, vert: false, hor: true },
-    { char: "n", word: "banana", idx: 9, vert: false, hor: true },
-    { char: "a", word: "banana", idx: 10, vert: true, hor: true },
-    { char: "e", word: "banana", idx: 16, vert: true, hor: false },
-    { char: "r", word: "banana", idx: 27, vert: true, hor: false },
-    { char: "r", word: "banana", idx: 38, vert: true, hor: false },
-    { char: "y", word: "banana", idx: 49, vert: true, hor: true },
+    {
+      char: "b",
+      idx: 5,
+      vert: "berry",
+      hor: "banana",
+      corner: 2,
+    },
+    {
+      char: "a",
+      idx: 6,
+      vert: null,
+      hor: "banana",
+      corner: null,
+    },
+    {
+      char: "n",
+      idx: 7,
+      vert: null,
+      hor: "banana",
+      corner: null,
+    },
+    {
+      char: "a",
+      idx: 8,
+      vert: null,
+      hor: "banana",
+      corner: null,
+    },
+    {
+      char: "n",
+      idx: 9,
+      vert: null,
+      hor: "banana",
+      corner: null,
+    },
+    {
+      char: "a",
+      idx: 10,
+      vert: "apple",
+      hor: "banana",
+      corner: 3,
+    },
+    {
+      char: "e",
+      idx: 16,
+      vert: "berry",
+      hor: null,
+      corner: null,
+    },
+    {
+      char: "r",
+      idx: 27,
+      vert: "berry",
+      hor: null,
+      corner: null,
+    },
+    {
+      char: "r",
+      idx: 38,
+      vert: "berry",
+      hor: null,
+      corner: null,
+    },
+    {
+      char: "y",
 
-    { char: "c", word: "banana", idx: 44, vert: false, hor: true },
-    { char: "h", word: "banana", idx: 45, vert: false, hor: true },
-    { char: "e", word: "banana", idx: 46, vert: false, hor: true },
-    { char: "r", word: "banana", idx: 47, vert: false, hor: true },
-    { char: "r", word: "banana", idx: 48, vert: false, hor: true },
-
-    { char: "p", word: "banana", idx: 21, vert: true, hor: false },
-    { char: "p", word: "banana", idx: 32, vert: true, hor: false },
-    { char: "l", word: "banana", idx: 43, vert: true, hor: false },
-    { char: "e", word: "banana", idx: 54, vert: true, hor: false },
+      idx: 49,
+      vert: "berry",
+      hor: "cherry",
+      corner: null,
+    },
+    {
+      char: "c",
+      idx: 44,
+      vert: null,
+      hor: "cherry",
+      corner: 1,
+    },
+    {
+      char: "h",
+      idx: 45,
+      vert: null,
+      hor: "cherry",
+      corner: null,
+    },
+    {
+      char: "e",
+      idx: 46,
+      vert: null,
+      hor: "cherry",
+      corner: null,
+    },
+    {
+      char: "r",
+      idx: 47,
+      vert: null,
+      hor: "cherry",
+      corner: null,
+    },
+    {
+      char: "r",
+      idx: 48,
+      vert: null,
+      hor: "cherry",
+      corner: null,
+    },
+    {
+      char: "p",
+      idx: 21,
+      vert: "apple",
+      hor: null,
+      corner: null,
+    },
+    {
+      char: "p",
+      idx: 32,
+      vert: "apple",
+      hor: null,
+      corner: null,
+    },
+    {
+      char: "l",
+      idx: 43,
+      vert: "apple",
+      hor: null,
+      corner: null,
+    },
+    {
+      char: "e",
+      idx: 54,
+      vert: "apple",
+      hor: null,
+      corner: null,
+    },
   ];
   const [boxes, setBoxes] = useState([]);
+  const [VHL, setVHL] = useState(null);
+  const [HHL, setHHL] = useState(null);
+
   const setGrid = () => {
     const initArr = [];
     for (let i = 0; i < 55; i++) {
       initArr.push({
-        letter: "",
         black: true,
-        vert: null,
-        hor: null,
         idx: i,
         id: Math.random() - 0.5,
       });
@@ -45,10 +158,12 @@ export default function IceAndFire() {
         if (box.idx === lettersArr[i].idx) {
           return {
             ...box,
-            letter: lettersArr[i].char,
+            char: lettersArr[i].char,
             black: false,
+            highLight: false,
             vert: lettersArr[i].vert,
             hor: lettersArr[i].hor,
+            corner: lettersArr[i].corner,
           };
         }
       }
@@ -63,8 +178,25 @@ export default function IceAndFire() {
     setGrid();
   }, []);
 
+  //if highlight changes
+  useEffect(() => {
+    if (VHL || HHL) {
+      let highLightedBoxes = boxes.map((box) => {
+        if ((box.vert && box.vert === VHL) || (box.hor && box.hor === HHL)) {
+          return { ...box, highLight: true };
+        } else {
+          return { ...box, highLight: false };
+        }
+      });
+      // console.log(highLightedBoxes);
+      setBoxes(highLightedBoxes);
+    }
+  }, [HHL, VHL]);
+
   const clickBox = (box) => {
     console.log(box);
+    setVHL(box.vert);
+    setHHL(box.hor);
   };
 
   return (

@@ -2,14 +2,50 @@
   height: 3rem;
   width: 3rem;
   border: 1px white solid;
+  display: flex;
+  justify-content: end;
+  align-items: start;
 }
+
 .letter {
   height: 3rem;
   width: 3rem;
-  background-color: rgb(233, 220, 220);
+  background-color: rgb(231, 225, 225);
 }
 .black {
   height: 3rem;
   width: 3rem;
   background-color: rgb(0, 0, 0);
+}
+.corner {
+  height: 25%;
+  width: 25%;
+  border-right: black solid 1px;
+  border-bottom: black solid 1px;
+  padding: 0 0 4px 0;
+  background-color: white;
+}
+.input-cont {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 1rem;
+}
+.l-input {
+  height: 1.6rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  width: 2.5rem;
+  margin: 2px;
+}
+.off {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: red;
 }
