@@ -28,6 +28,15 @@
   gap: 1rem;
   color: transparent;
 }
+.medium-cont {
+  /* border: solid red 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: transparent;
+  padding-left: 1.5rem;
+}
 .github-cont:hover {
   color: white;
 }
@@ -43,6 +52,9 @@
 .linkedin-cont:hover {
   color: white;
 }
+.medium-cont:hover {
+  color: white;
+}
 .github-icon {
   height: 3rem;
   width: 3rem;
@@ -52,7 +64,19 @@
   background-repeat: no-repeat;
   /* margin-top: 3rem; */
 }
+.medium-icon {
+  height: 3rem;
+  width: 3rem;
+  background-image: url("../../images/medium.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* margin-top: 3rem; */
+}
 .github-icon:hover {
+  filter: invert(1);
+}
+.medium-icon:hover {
   filter: invert(1);
 }
 .linkedin-icon {

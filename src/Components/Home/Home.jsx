@@ -24,6 +24,13 @@ export default function Home() {
           </Link>
           linkedin
         </div>
+
+        <div className="medium-cont">
+          <Link to="https://medium.com/@erinmontybruce" target="_blank">
+            <div className="medium-icon" />
+          </Link>
+          Medium Blog
+        </div>
       </div>
     </div>
   );
