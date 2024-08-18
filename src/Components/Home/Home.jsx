@@ -29,7 +29,7 @@ export default function Home() {
           <Link to="https://medium.com/@erinmontybruce" target="_blank">
             <div className="medium-icon" />
           </Link>
-          Medium Blog
+          medium blog
         </div>
       </div>
     </div>

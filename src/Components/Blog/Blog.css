@@ -18,18 +18,19 @@
   justify-content: flex-end;
   align-items: center;
   font-family: "Righteous", sans-serif;
-  background-color: rgba(0, 0, 0, 0.877);
+  background-color: black;
   padding: 1rem 1rem 1rem 0;
-  /* border: 0.1rem solid black; */
   color: rgb(255, 244, 244);
 }
 .title a {
   padding-right: 1rem;
 }
-.title a:hover {
+.title:hover {
   color: rgb(212, 194, 194);
+  filter: invert(0.2);
+  background-color: rgba(0, 0, 0, 0.613);
 }
-.title a:visited:hover {
+.title:visited:hover {
   color: rgb(212, 194, 194);
 }
 .title a:visited {
@@ -37,18 +38,19 @@
 }
 .author-img {
   /* border: rgb(0, 0, 0) solid 3px; */
-  height: 6rem;
-  width: 6rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 100%;
   /* margin-left: 14rem; */
   padding-right: 2rem;
+  padding-left: 3rem;
 }
 .posts {
-  background-color: rgba(255, 243, 243, 0.707);
-  color: black;
+  background-color: black;
+  color: rgb(255, 244, 244);
   /* border: 0.1rem solid black; */
   /* padding: 1rem; */
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin: 2rem 0 2rem 0;
   /* padding-bottom: 1rem; */
   padding: 1rem 1rem 2rem 1rem;
@@ -63,7 +65,13 @@
   display: flex;
   justify-content: center;
 }
+.posts h2 {
+  font-family: "Righteous", sans-serif;
+}
 .posts img {
   border: solid black 5px;
   min-width: 3rem;
+}
+.posts a {
+  color: rgb(220, 220, 32);
 }

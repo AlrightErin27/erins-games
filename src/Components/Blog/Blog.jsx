@@ -23,24 +23,25 @@ export default function Blog() {
     getPostData();
   }, []);
 
-  // console.log("IMG", authorImg.image);
   return (
     <div className="blog">
-      <div className="title-cont">
-        <div className="title">
-          <a href="https://medium.com/@erinmontybruce" target="_blank">
-            Erin's Medium Blog
-          </a>
-
-          <img src={`${authorImg}`} className="author-img" />
+      <a
+        href="https://medium.com/@erinmontybruce"
+        target="_blank"
+        rel="noreferrer"
+        className="title"
+      >
+        <div>
+          Erin's Medium Blog
+          <img src={`${authorImg}`} alt="author img" className="author-img" />
         </div>
-      </div>
+      </a>
 
       {posts.map((post) => (
         <div className="posts" key={post.guid}>
           <h2>{post.title}</h2>
           <p dangerouslySetInnerHTML={{ __html: post.content }} />
-          <a href={post.link} target="_blank" rel="noopener noreferrer">
+          <a href={post.link} target="_blank" rel="noreferrer">
             Read more
           </a>
         </div>
