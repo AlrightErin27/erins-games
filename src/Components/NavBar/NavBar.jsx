@@ -9,7 +9,7 @@ export default function Navbar({ handleShop, handleNoShop }) {
           Home
         </CustomLink>
 
-        <CustomLink to="/blog" onClick={handleShop}>
+        <CustomLink to="/blog" onClick={handleNoShop}>
           Blog
         </CustomLink>
         <CustomLink to="/concentration" onClick={handleNoShop}>

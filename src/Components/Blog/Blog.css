@@ -5,7 +5,7 @@
 
 .blog {
   height: 100vh;
-  margin-top: 5rem;
+  margin-top: 10rem;
   width: 90vw;
   /* border: solid black 1px; */
 
@@ -18,8 +18,8 @@
   justify-content: flex-end;
   align-items: center;
   font-family: "Righteous", sans-serif;
-  background-color: black;
-  padding: 1rem 1rem 1rem 0;
+  background-color: rgba(0, 0, 0, 0.806);
+  padding: 10rem 1rem 1rem 0;
   color: rgb(255, 244, 244);
 }
 .title a {
@@ -46,7 +46,7 @@
   padding-left: 3rem;
 }
 .posts {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.806);
   color: rgb(255, 244, 244);
   /* border: 0.1rem solid black; */
   /* padding: 1rem; */
