@@ -64,8 +64,7 @@
   font-family: "Righteous", sans-serif;
 }
 .posts img {
-  border: solid black 5px;
-  min-width: 3rem;
+  min-width: 35rem;
 }
 .posts a {
   color: rgb(220, 220, 32);

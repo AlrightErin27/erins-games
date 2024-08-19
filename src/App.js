@@ -6,10 +6,10 @@ import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
 
 //inside GamesFolder inside Games component
-import Concentration1 from "./Components/Games/GamesFile/Concentration1/Concentration1";
-import NoughtsAndCrosses from "./Components/Games/GamesFile/NoughtsAndCrosses/NoughtsAndCrosses";
-import IceAndFire from "./Components/Games/GamesFile/IceAndFire/IceAndFire";
-import Crossword from "./Components/Games/GamesFile/Crossword/Crossword";
+import Concentration1 from "./Components/GameComponents/Concentration1/Concentration1";
+import NoughtsAndCrosses from "./Components/GameComponents/NoughtsAndCrosses/NoughtsAndCrosses";
+import IceAndFire from "./Components/GameComponents/IceAndFire/IceAndFire";
+import Crossword from "./Components/GameComponents/Crossword/Crossword";
 
 function App() {
   return (
