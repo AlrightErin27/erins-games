@@ -7,86 +7,48 @@
   display: flex;
   gap: 1rem;
   font-family: "Cutive Mono", monospace;
-  padding: 12rem 0 12rem 4.5rem;
+  padding: 18rem 0 20rem 4.5rem;
 }
 .Home img {
   margin: 4rem 0 4rem 0;
-  border: 0.5rem solid #71631f9d;
+  border: 0.5rem solid #7f805b;
 }
-.link-cont {
-  margin-top: 4rem;
+.icon-cont {
+  padding-top: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  /* border: solid red 1px; */
-}
-.github-cont {
-  /* border: solid red 1px; */
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: start;
   gap: 1rem;
-  color: transparent;
 }
-.medium-cont {
-  /* border: solid red 1px; */
+.icon {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  gap: 1rem;
-  color: transparent;
-  padding-left: 1.5rem;
-}
-.github-cont:hover {
-  color: white;
-}
-.linkedin-cont {
-  /* border: solid red 1px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  color: transparent;
-  margin-left: 1rem;
-}
-.linkedin-cont:hover {
-  color: white;
-}
-.medium-cont:hover {
-  color: white;
-}
-.github-icon {
-  height: 3rem;
-  width: 3rem;
-  background-image: url("../../images/github.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* margin-top: 3rem; */
-}
-.medium-icon {
-  height: 3rem;
-  width: 3rem;
-  background-image: url("../../images/medium.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* margin-top: 3rem; */
-}
-.github-icon:hover {
+  padding: 5px;
+  height: 5rem;
   filter: invert(1);
 }
-.medium-icon:hover {
-  filter: invert(1);
+.icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  text-decoration: none;
+  color: transparent;
 }
-.linkedin-icon {
+.icon a:hover {
+  color: black;
+  font-size: 1.5rem;
+}
+.icon-img {
   height: 4rem;
-  width: 4rem;
-  background-image: url("../../images/linkedin.png");
-  background-position: center;
+  min-width: 4rem;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
-.linkedin-icon:hover {
-  filter: invert(1);
+.icon p {
+  width: 4rem;
+  padding-left: 1rem;
 }

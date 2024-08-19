@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
 import Games from "./Components/Games/Games";
+
+//inside GamesFolder inside Games component
 import Concentration1 from "./Components/Games/GamesFile/Concentration1/Concentration1";
 import NoughtsAndCrosses from "./Components/Games/GamesFile/NoughtsAndCrosses/NoughtsAndCrosses";
 import IceAndFire from "./Components/Games/GamesFile/IceAndFire/IceAndFire";
-
 import Crossword from "./Components/Games/GamesFile/Crossword/Crossword";
 
 function App() {
@@ -28,6 +28,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/games" element={<Games />} />
 
+          {/* //inside GamesFolder inside Games component */}
           <Route path="/concentration1" element={<Concentration1 />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           <Route path="/crossword" element={<Crossword />} />

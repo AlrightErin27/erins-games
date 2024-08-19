@@ -8,7 +8,7 @@ body {
 }
 .stripe {
   background-color: #efe9db;
-  margin-left: 14rem;
+  margin-left: 7.5rem;
   height: 100vh;
   width: 30%;
   position: fixed;
@@ -21,8 +21,6 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-}
-.shop-background {
 }
 .displayRoutes-navbar {
   height: 3rem;
