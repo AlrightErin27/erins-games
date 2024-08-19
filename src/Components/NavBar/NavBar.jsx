@@ -12,20 +12,9 @@ export default function Navbar({ handleShop, handleNoShop }) {
         <CustomLink to="/blog" onClick={handleNoShop}>
           Blog
         </CustomLink>
-        <CustomLink to="/concentration" onClick={handleNoShop}>
-          Concentration
-        </CustomLink>
-        <CustomLink to="/noughts-&-crosses" onClick={handleNoShop}>
-          Noughts & Crosses
-        </CustomLink>
-        <CustomLink to="/shop" onClick={handleShop}>
-          Shop
-        </CustomLink>
-        <CustomLink to="/crossword" onClick={handleNoShop}>
-          Crossword
-        </CustomLink>
-        <CustomLink to="/ice-and-fire" onClick={handleNoShop}>
-          Ice And Fire
+
+        <CustomLink to="/games" onClick={handleNoShop}>
+          Games
         </CustomLink>
       </ul>
     </nav>
