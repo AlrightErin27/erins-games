@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.677);
 }
 .NavBar ul {
   margin: 0;
@@ -21,15 +21,55 @@
   align-items: center;
   gap: 3rem;
 }
-.NavBar a {
+.link {
+  text-decoration: none;
+  text-shadow: white 0px 0 10px;
+  color: white;
+  padding: 0 0.4rem 0 0.4rem;
+}
+.link:hover {
+  color: black;
+  text-shadow: white 0px 0 10px;
+}
+
+.games-link-cont {
+  display: flex;
+  gap: 2rem;
+  /* background-color: black; */
+}
+.games-link {
+  text-decoration: none;
+  padding: 0 0.4rem 0 0.4rem;
+  text-shadow: white 0px 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.games-link:hover {
+  color: black;
+  cursor: pointer;
+  text-shadow: white 0px 0 10px;
+}
+/* .NavBar a {
   text-decoration: none;
   color: black;
   font-size: 80%;
   white-space: nowrap;
 }
-.NavBar li.active {
+.link.active {
   text-shadow: #948b7f 1px 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 80%;
+  white-space: nowrap;
 }
-.NavBar li:hover {
+.link:hover {
   text-shadow: #6e6a56 1px 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 80%;
+  white-space: nowrap;
 }
+.games-link {
+  color: blue;
+} */

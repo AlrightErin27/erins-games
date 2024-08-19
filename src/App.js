@@ -4,7 +4,6 @@ import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
-import Games from "./Components/Games/Games";
 
 //inside GamesFolder inside Games component
 import Concentration1 from "./Components/Games/GamesFile/Concentration1/Concentration1";
@@ -26,7 +25,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/games" element={<Games />} />
 
           {/* //inside GamesFolder inside Games component */}
           <Route path="/concentration1" element={<Concentration1 />} />

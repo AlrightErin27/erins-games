@@ -5,13 +5,10 @@
 
 .blog {
   height: 100vh;
-  margin-top: 10rem;
+  margin-top: 2rem;
   width: 90vw;
-  /* border: solid black 1px; */
-
   font-family: "Cutive Mono", monospace;
 }
-
 .title {
   font-size: 3rem;
   display: flex;
@@ -19,7 +16,7 @@
   align-items: center;
   font-family: "Righteous", sans-serif;
   background-color: rgba(0, 0, 0, 0.806);
-  padding: 10rem 1rem 1rem 0;
+  padding: 4rem 1rem 1rem 0;
   color: rgb(255, 244, 244);
 }
 .title a {
@@ -37,11 +34,9 @@
   color: rgb(255, 244, 244);
 }
 .author-img {
-  /* border: rgb(0, 0, 0) solid 3px; */
-  height: 8rem;
-  width: 8rem;
+  height: 12rem;
+  width: 12rem;
   border-radius: 100%;
-  /* margin-left: 14rem; */
   padding-right: 2rem;
   padding-left: 3rem;
 }
