@@ -28,10 +28,12 @@
   text-shadow: white 0px 0 10px;
   color: white;
   padding: 0 0.4rem 0 0.4rem;
+  cursor: pointer;
 }
 .link:hover {
   color: black;
   text-shadow: white 0px 0 10px;
+  cursor: pointer;
 }
 .select-link {
   text-decoration: none;
@@ -39,11 +41,13 @@
   color: rgba(255, 255, 255, 0.552);
   padding: 0 0.4rem 0 0.4rem;
   pointer-events: none;
+  cursor: pointer;
 }
 .games-link-cont {
   display: flex;
   gap: 2rem;
   /* background-color: black; */
+  white-space: nowrap;
 }
 .games-link {
   text-decoration: none;
@@ -58,26 +62,3 @@
   cursor: pointer;
   text-shadow: white 0px 0 10px;
 }
-/* .NavBar a {
-  text-decoration: none;
-  color: black;
-  font-size: 80%;
-  white-space: nowrap;
-}
-.link.active {
-  text-shadow: #948b7f 1px 0 10px;
-  text-decoration: none;
-  color: black;
-  font-size: 80%;
-  white-space: nowrap;
-}
-.link:hover {
-  text-shadow: #6e6a56 1px 0 10px;
-  text-decoration: none;
-  color: black;
-  font-size: 80%;
-  white-space: nowrap;
-}
-.games-link {
-  color: blue;
-} */

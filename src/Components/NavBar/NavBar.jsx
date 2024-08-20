@@ -50,6 +50,13 @@ export default function Navbar() {
                 Concentration1
               </CustomLink>
               <CustomLink
+                to="memory"
+                onClick={() => setSelect("game1.5")}
+                className={select !== "game1.5" ? "link" : "select-link"}
+              >
+                Memory
+              </CustomLink>
+              <CustomLink
                 to="noughts-&-crosses"
                 onClick={() => setSelect("game2")}
                 className={select !== "game2" ? "link" : "select-link"}

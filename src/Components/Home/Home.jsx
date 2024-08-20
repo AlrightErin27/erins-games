@@ -1,6 +1,5 @@
 import "./Home.css";
 import Resume from "../../images/Resume.1.png";
-import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import LinkedinIcon from "../../images/linkedin.png";
 import GithubIcon from "../../images/github.png";

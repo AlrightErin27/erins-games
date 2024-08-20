@@ -2,12 +2,13 @@
 /* font-family: "Cutive Mono", monospace; */
 
 .Home {
-  height: 100vh;
+  height: 80vh;
   width: auto;
   display: flex;
   gap: 1rem;
   font-family: "Cutive Mono", monospace;
-  padding: 20rem 0 20rem 4.5rem;
+  padding: 0rem 0 20rem 4.5rem;
+  margin-top: 14rem;
 }
 .Home img {
   margin: 4rem 0 4rem 0;
