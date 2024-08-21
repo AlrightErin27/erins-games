@@ -1,71 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-/* font-family: "Cutive Mono", monospace; */
-@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gochi+Hand&family=Platypi:ital,wght@0,300..800;1,300..800&family=Righteous&display=swap");
-/* font-family: "Righteous", sans-serif; */
+/* src/App.css */
+/* body {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+} */
 
 .blog {
-  height: 100vh;
-  margin-top: 2rem;
-  width: 90vw;
-  font-family: "Cutive Mono", monospace;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.title {
-  font-size: 3rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-family: "Righteous", sans-serif;
-  background-color: rgba(0, 0, 0, 0.806);
-  padding: 4rem 1rem 1rem 0;
-  color: rgb(255, 244, 244);
-}
-.title a {
-  padding-right: 1rem;
-}
-.title:hover {
-  color: rgb(212, 194, 194);
-  filter: invert(0.2);
-  background-color: rgba(0, 0, 0, 0.613);
-}
-.title:visited:hover {
-  color: rgb(212, 194, 194);
-}
-.title a:visited {
-  color: rgb(255, 244, 244);
-}
-.author-img {
-  height: 12rem;
-  width: 12rem;
-  border-radius: 100%;
-  padding-right: 2rem;
-  padding-left: 3rem;
-}
-.posts {
-  background-color: rgba(0, 0, 0, 0.806);
-  color: rgb(255, 244, 244);
-  /* border: 0.1rem solid black; */
-  /* padding: 1rem; */
-  font-size: 1.4rem;
-  margin: 2rem 0 2rem 0;
-  /* padding-bottom: 1rem; */
-  padding: 1rem 1rem 2rem 1rem;
-}
-.blog h2 {
-  font-size: 2rem;
-  font-weight: 1800px;
+
+h1 {
   text-align: center;
-  text-decoration: underline;
+  color: #bada55;
 }
-.posts figure {
+
+.add-post {
+  margin-bottom: 20px;
+}
+
+.add-post form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-.posts h2 {
-  font-family: "Righteous", sans-serif;
+
+.add-post input,
+.add-post textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
 }
-.posts img {
-  min-width: 35rem;
+
+.add-post button {
+  background-color: #bada55;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.posts a {
-  color: rgb(220, 220, 32);
+
+.add-post button:hover {
+  background-color: #a9c815;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  background-color: #444;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 8px;
 }
