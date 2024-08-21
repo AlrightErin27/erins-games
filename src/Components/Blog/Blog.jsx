@@ -22,7 +22,7 @@ const Blog = () => {
 
   return (
     <div className="blog">
-      <h1>My Blog</h1>
+      <h1>Dev Blog</h1>
       <AddPost onAdd={handleAddPost} />
       <PostList key={refresh} />
     </div>

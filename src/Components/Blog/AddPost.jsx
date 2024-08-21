@@ -37,6 +37,7 @@ const AddPost = ({ onAdd }) => {
         />
         <textarea
           placeholder="Content"
+          className="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
           required

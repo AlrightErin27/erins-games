@@ -6,7 +6,7 @@
 } */
 
 .blog {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
   background-color: #333;
@@ -48,7 +48,9 @@ h1 {
 .add-post button:hover {
   background-color: #a9c815;
 }
-
+.content {
+  height: 20rem;
+}
 .post-list {
   display: flex;
   flex-direction: column;

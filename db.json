@@ -1,10 +1,16 @@
 {
   "posts": [
     {
-      "id": "c3a4",
-      "title": "Axios",
-      "image": "https://giphy.com/gifs/harry-potter-and-the-philosophers-stone-uUoKsbqleQAo0",
-      "content": "<iframe src=\"https://giphy.com/embed/uUoKsbqleQAo0\" width=\"480\" height=\"480\" style=\"\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe><p><a href=\"https://giphy.com/gifs/harry-potter-and-the-philosophers-stone-uUoKsbqleQAo0\">via GIPHY</a></p>"
+      "id": "a5fa",
+      "title": "grbew",
+      "image": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3JhZ2E2cHQxb25vajl5MjV1dW15ZHgxZ3Izd2psdXJ2bW5lb3YycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uUoKsbqleQAo0/giphy.gif",
+      "content": "ger"
+    },
+    {
+      "id": "5255",
+      "title": "Accio Axios",
+      "image": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3JhZ2E2cHQxb25vajl5MjV1dW15ZHgxZ3Izd2psdXJ2bW5lb3YycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uUoKsbqleQAo0/giphy.gif",
+      "content": "To use Axios to display my Medium Blog as an embedded feed in my portfolio site:\n\n“npm install axios” in command line- to store as a dependency in the react app\n\nImport useState, and useEffect from the react library\nCreate a function that “gets” your medium feed API URL using https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@YOUR_USER_NAME_HERE\n\nOnce your function gets the feed data from the API, “then” you set what you need for your page into state using useState.\n\n*For my project I needed my posts & the author’s image. To find the correct terminology needed to access this information I opened the API URL in my browser and inspected how it was written. As you can see in the pic below to get the image I needed to use the dot notation res (response) -> data -> feed -> image. This traverses the given object to result in the images’s string value, which was then set into state “setAuthorImg(res.data.feed.image);”\n\n\n5. After .get & .then, .catch is needed to display an error messages to the console to conclude the function.\n\n6. useEffect is used to manage when the function runs- just on the pages first render.\n\n\n7. To display your blog posts I simply mapped through the posts data I had saved in state, and used dot notation to access the key’s values that I wanted to be displayed."
     }
   ]
 }
