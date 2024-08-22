@@ -7,8 +7,7 @@ import Blog from "./Components/Blog/Blog";
 import Resume from "./Components/Home/Resume";
 
 //inside GamesFolder inside Games component
-import Concentration1 from "./Components/Concentration1/Concentration1";
-import Memory from "./Components/GameComponents/Memory/Memory";
+import Concentration from "./Components/Concentration/Concentration";
 import NoughtsAndCrosses from "./Components/GameComponents/NoughtsAndCrosses/NoughtsAndCrosses";
 import IceAndFire from "./Components/GameComponents/IceAndFire/IceAndFire";
 import Crossword from "./Components/GameComponents/Crossword/Crossword";
@@ -30,8 +29,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
 
           {/* //inside GamesFolder inside Games component */}
-          <Route path="/concentration1" element={<Concentration1 />} />
-          <Route path="/memory" element={<Memory />} />
+          <Route path="/concentration" element={<Concentration />} />
           <Route path="/noughts-&-crosses" element={<NoughtsAndCrosses />} />
           <Route path="/crossword" element={<Crossword />} />
           <Route path="/ice-and-fire" element={<IceAndFire />} />

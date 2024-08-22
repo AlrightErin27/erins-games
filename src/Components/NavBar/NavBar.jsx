@@ -43,18 +43,11 @@ export default function Navbar() {
           {!selectGames ? null : (
             <>
               <CustomLink
-                to="concentration1"
+                to="concentration"
                 onClick={() => setSelect("game1")}
                 className={select !== "game1" ? "link" : "select-link"}
               >
-                Concentration1
-              </CustomLink>
-              <CustomLink
-                to="memory"
-                onClick={() => setSelect("game1.5")}
-                className={select !== "game1.5" ? "link" : "select-link"}
-              >
-                Memory
+                Concentration
               </CustomLink>
               <CustomLink
                 to="noughts-&-crosses"
