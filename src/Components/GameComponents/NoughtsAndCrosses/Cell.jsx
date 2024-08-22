@@ -1,23 +1,9 @@
-import "./NoughtsAndCrosses.css";
+import React from "react";
 
-export default function Cell({ cell, handleCellClick }) {
-  const handleClick = () => {
-    handleCellClick(cell);
-  };
-
-  function displayCellMark() {
-    if (cell.mark === "X") {
-      return <div className="X-cell">{cell.mark}</div>;
-    } else if (cell.mark === "O") {
-      return <div className="O-cell">{cell.mark}</div>;
-    }
-  }
+export default function Cell({ value, onClick }) {
   return (
-    <div
-      className={cell.mark === "" ? "cell-empty" : "cell-full"}
-      onClick={handleClick}
-    >
-      {displayCellMark()}
-    </div>
+    <button className="cell" onClick={onClick}>
+      {value}
+    </button>
   );
 }

@@ -2,35 +2,33 @@
 /* font-family: "Cutive Mono", monospace; */
 
 .Home {
-  height: 80vh;
-  width: auto;
+  height: 87vh;
+  width: 100vw;
   display: flex;
   gap: 1rem;
   font-family: "Cutive Mono", monospace;
   padding: 0rem 0 20rem 4.5rem;
   margin-top: 14rem;
+  background-color: rgba(0, 0, 0, 0.549);
+  display: flex;
+  justify-content: center;
 }
 .Home img {
   margin: 4rem 0 4rem 0;
   border: 4rem solid #7f805b;
 }
 .background {
-  /* border: solid red 1px; */
   background-image: url("../../images/resume/hellow.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  /* background-color: #efe9db; */
-  height: 115vh;
+  height: 120vh;
   width: 55vw;
   display: flex;
   justify-content: end;
-  /* align-items: center; */
   gap: 2rem;
 }
-
 .icon-cont {
-  /* border: solid red 1px; */
   padding-top: 5rem;
   display: flex;
   flex-direction: column;

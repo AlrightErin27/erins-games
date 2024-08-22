@@ -1,29 +1,57 @@
-/* -------------- NOUGHTS AND CROSSES -------------- */
+/* NoughtsAndCrosses.css */
 /* font for square's X's and O's */
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 /* font-family: "Rye", serif; */
 
-/* font for score data */
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-/* font-family: "Cutive Mono", monospace; */
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gochi+Hand&family=Platypi:ital,wght@0,300..800;1,300..800&family=Righteous&display=swap");
+/* font-family: "Righteous", sans-serif; */
 
 .noughts-and-crosses {
-  height: 50rem;
-  width: 60rem;
   display: flex;
   flex-direction: column;
-  display: flex;
-  justify-content: baseline;
   align-items: center;
-}
-.board-cont {
-  height: 100%;
-  width: 90%;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 3rem;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
+
+.board-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 11.5rem);
+  grid-template-rows: repeat(3, 11.5rem);
+  gap: 5px;
+}
+
+.cell {
+  width: 11.5rem;
+  height: 11.5rem;
+  font-family: "Rye", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(69, 55, 55, 0.195);
+  border: none;
+  font-size: 5em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: rgba(69, 55, 55, 0.501);
+}
+
+.cell:focus {
+  outline: none;
+}
+
 .cats-game {
   height: 25rem;
   width: 25rem;
@@ -34,73 +62,17 @@
   background-position: center;
   text-align: center;
 }
-.board {
-  height: 40rem;
-  width: 40rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1%;
-}
-.cell-empty {
-  height: 32%;
-  background-color: rgba(93, 93, 76, 0.148);
-  width: 32%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3px;
-  cursor: pointer;
-}
-.cell-empty:hover {
-  background-color: rgba(93, 93, 76, 0.408);
-}
-.cell-full {
-  font-family: "Rye", serif;
-  height: 32%;
-  width: 32%;
-  padding-top: 3px;
-  pointer-events: none;
-  color: rgba(0, 0, 0, 0.845);
-  font-size: 5.5rem;
-}
-.O-cell {
-  background-color: rgba(205, 185, 156, 0.414);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.X-cell {
-  background-color: rgba(215, 215, 188, 0.414);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
+
 .game-info {
-  height: 70%;
-  width: 100%;
-  font-family: "Cutive Mono", monospace;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.player-display {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 1rem;
-  gap: 9px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-family: "Righteous", sans-serif;
 }
-.text-display {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-}
-.letter-display {
-  font-family: "Rye", serif;
-  font-size: 1.3rem;
+
+.game-info p {
+  margin: 5px 0;
 }

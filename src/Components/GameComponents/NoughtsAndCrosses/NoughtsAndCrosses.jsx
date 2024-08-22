@@ -5,8 +5,7 @@ import GameInfo from "./GameInfo";
 
 export default function NoughtsAndCrosses() {
   const [player, setPlayer] = useState("X");
-  const [cells, setCells] = useState([]);
-  const [numCellsFilled, setNumCellsFilled] = useState(0);
+  const [cells, setCells] = useState(Array(9).fill(null));
   const [foundWin, setFoundWin] = useState(false);
   const [roundsPlayed, setRoundsPlayed] = useState(0);
   const [xWins, setXWins] = useState(0);
@@ -16,158 +15,77 @@ export default function NoughtsAndCrosses() {
   const startGame = () => {
     setFoundWin(false);
     setCatsGame(false);
-    //set cells into state using emptyCells
-    const emptyCells = [
-      { mark: "", local: 1 },
-      { mark: "", local: 2 },
-      { mark: "", local: 3 },
-      { mark: "", local: 4 },
-      { mark: "", local: 5 },
-      { mark: "", local: 6 },
-      { mark: "", local: 7 },
-      { mark: "", local: 8 },
-      { mark: "", local: 9 },
-    ].map((cell) => ({ ...cell, id: Math.random() }));
-    setCells(emptyCells);
+    setCells(Array(9).fill(null));
+    setPlayer("X");
   };
 
-  //start game automatically
   useEffect(() => {
     startGame();
   }, []);
 
-  const handleCellClick = (cell) => {
-    const newCell = { ...cell, mark: player };
-    setCells((prevCells) => {
-      return prevCells.map((prevCell) => {
-        if (prevCell.mark === "" && prevCell.local === cell.local) {
-          return newCell;
-        } else {
-          return prevCell;
-        }
-      });
-    });
-    setNumCellsFilled(() => numCellsFilled + 1);
-    player === "X" ? setPlayer("O") : setPlayer("X");
+  const checkForWins = (Y, board) => {
+    const winningCombinations = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+
+    for (let combination of winningCombinations) {
+      const [a, b, c] = combination;
+      if (board[a] === Y && board[b] === Y && board[c] === Y) {
+        return true;
+      }
+    }
+    return false;
   };
 
-  //if all cells are filled in state, depending on current player, check board for wins
-  //changes when a cell is changed aka clicked
-  useEffect(() => {
-    const handleWinner = (Y) => {
-      if (Y === "X") {
-        setXWins((y) => y + 1);
-      }
-      if (Y === "O") {
-        setOWins((y) => y + 1);
-      }
+  const handleCellClick = (index) => {
+    if (cells[index] || foundWin || catsGame) return;
+
+    const newCells = [...cells];
+    newCells[index] = player;
+    setCells(newCells);
+
+    const isWin = checkForWins(player, newCells);
+
+    if (isWin) {
       setFoundWin(true);
-      setNumCellsFilled(0);
-      setPlayer("X");
-      setRoundsPlayed((y) => y + 1);
-    };
-
-    const checkForWins = (Y) => {
-      //check only for wins horizontal
-      if (
-        (cells[0].mark === Y && cells[1].mark === Y && cells[2].mark === Y) ||
-        (cells[3].mark === Y && cells[4].mark === Y && cells[5].mark === Y) ||
-        (cells[6].mark === Y && cells[7].mark === Y && cells[8].mark === Y)
-      ) {
-        handleWinner(Y);
-      } else if (
-        //check only for wins vertical
-        (cells[0].mark === Y && cells[3].mark === Y && cells[6].mark === Y) ||
-        (cells[1].mark === Y && cells[4].mark === Y && cells[7].mark === Y) ||
-        (cells[2].mark === Y && cells[5].mark === Y && cells[8].mark === Y)
-      ) {
-        handleWinner(Y);
-      } else if (
-        //check only for wins diagonal
-        (cells[0].mark === Y && cells[4].mark === Y && cells[8].mark === Y) ||
-        (cells[2].mark === Y && cells[4].mark === Y && cells[6].mark === Y)
-      ) {
-        handleWinner(Y);
+      if (player === "X") {
+        setXWins((prevXWins) => prevXWins + 1);
+      } else {
+        setOWins((prevOWins) => prevOWins + 1);
       }
-    };
-    //runs check for wins fx with input dependant on current player
-    if (cells[8]) {
-      player === "X" ? checkForWins("O") : checkForWins("X");
-    }
-  }, [cells, player]);
-
-  //check input var for winning patterns in cells array
-  const checkForWins = (Y) => {
-    //check only for wins horizontal
-    if (
-      (cells[0].mark === Y && cells[1].mark === Y && cells[2].mark === Y) ||
-      (cells[3].mark === Y && cells[4].mark === Y && cells[5].mark === Y) ||
-      (cells[6].mark === Y && cells[7].mark === Y && cells[8].mark === Y)
-    ) {
-      handleWinner(Y);
-    } else if (
-      //check only for wins vertical
-      (cells[0].mark === Y && cells[3].mark === Y && cells[6].mark === Y) ||
-      (cells[1].mark === Y && cells[4].mark === Y && cells[7].mark === Y) ||
-      (cells[2].mark === Y && cells[5].mark === Y && cells[8].mark === Y)
-    ) {
-      handleWinner(Y);
-    } else if (
-      //check only for wins diagonal
-      (cells[0].mark === Y && cells[4].mark === Y && cells[8].mark === Y) ||
-      (cells[2].mark === Y && cells[4].mark === Y && cells[6].mark === Y)
-    ) {
-      handleWinner(Y);
-    }
-  };
-
-  //checks if there's a winner an sets the state
-  const handleWinner = (Y) => {
-    if (Y === "X") {
-      setXWins(() => xWins + 1);
-    }
-    if (Y === "O") {
-      setOWins(() => oWins + 1);
-    }
-    setFoundWin(true);
-    setNumCellsFilled(0);
-    setPlayer("X");
-    setRoundsPlayed(() => roundsPlayed + 1);
-  };
-
-  //Cat's Game check win
-  if (!foundWin && numCellsFilled === 9) {
-    checkForWins("X");
-    checkForWins("O");
-    if (!foundWin) {
-      setCatsGame(true);
-      handleWinner("Cat's Game");
-      // console.log("CATS GAME");
-    }
-  }
-
-  useEffect(() => {
-    if (foundWin) {
+      setRoundsPlayed((prevRounds) => prevRounds + 1);
       setTimeout(() => startGame(), 1800);
+    } else if (newCells.every((cell) => cell !== null)) {
+      setCatsGame(true);
+      setRoundsPlayed((prevRounds) => prevRounds + 1);
+      setTimeout(() => startGame(), 1800);
+    } else {
+      setPlayer((prevPlayer) => (prevPlayer === "X" ? "O" : "X"));
     }
-  }, [foundWin]);
+  };
 
   return (
     <div className="noughts-and-crosses">
       <div className="board-cont">
-        {catsGame ? <div className="cats-game"></div> : null}
+        {catsGame && <div className="cats-game" />}
         <div className="board">
-          {cells.map((cell) => (
-            <Cell cell={cell} key={cell.id} handleCellClick={handleCellClick} />
+          {cells.map((cell, index) => (
+            <Cell
+              key={index}
+              value={cell}
+              onClick={() => handleCellClick(index)}
+            />
           ))}
         </div>
       </div>
-      <GameInfo
-        player={player}
-        roundsPlayed={roundsPlayed}
-        xWins={xWins}
-        oWins={oWins}
-      />
+      <GameInfo roundsPlayed={roundsPlayed} xWins={xWins} oWins={oWins} />
     </div>
   );
 }
