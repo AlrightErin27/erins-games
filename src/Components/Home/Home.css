@@ -12,10 +12,26 @@
 }
 .Home img {
   margin: 4rem 0 4rem 0;
-  border: 0.5rem solid #7f805b;
+  border: 4rem solid #7f805b;
 }
+.background {
+  /* border: solid red 1px; */
+  background-image: url("../../images/hellow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* background-color: #efe9db; */
+  height: 115vh;
+  width: 55vw;
+  display: flex;
+  justify-content: end;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
 .icon-cont {
-  padding-top: 6rem;
+  /* border: solid red 1px; */
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +44,7 @@
   align-items: center;
   padding: 5px;
   height: 5rem;
-  filter: invert(1);
+  /* filter: invert(1); */
 }
 .icon a {
   display: flex;
@@ -39,7 +55,7 @@
   color: transparent;
 }
 .icon a:hover {
-  color: black;
+  color: #fffef2;
   font-size: 1.5rem;
 }
 .icon-img {
@@ -52,4 +68,28 @@
 .icon p {
   width: 4rem;
   padding-left: 1rem;
+}
+.resume {
+  height: 90vh;
+  display: flex;
+}
+.pg-cont {
+  height: 40rem;
+  width: 35vw;
+}
+.pg-1 {
+  background-image: url("../../images/resume/resumePG1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 54rem;
+  width: 35vw;
+}
+.pg-2 {
+  background-image: url("../../images/resume/resumePG2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 54rem;
+  width: 35vw;
 }

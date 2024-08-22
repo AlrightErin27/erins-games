@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
+import Resume from "./Components/Home/Resume";
 
 //inside GamesFolder inside Games component
 import Concentration1 from "./Components/Concentration1/Concentration1";
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/resume" element={<Resume />} />
 
           {/* //inside GamesFolder inside Games component */}
           <Route path="/concentration1" element={<Concentration1 />} />

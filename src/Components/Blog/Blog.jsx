@@ -1,32 +1,51 @@
-// src/Blog.js
-import React, { useState } from "react";
-import AddPost from "./AddPost";
-import PostList from "./PostList";
 import "./Blog.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-// NOTES:
-// to start server (in root dir) : npm run server
-//server runs on port 5001
-// to end running server is "control" + c
+export default function Blog() {
+  const [posts, setPosts] = useState([]);
+  const [authorImg, setAuthorImg] = useState(null);
 
-// to find a still running server: lsof -i :5000
-// to kill it: kill -9 7576
-// that last number is the PID number. use correct one associated with the server to kill
-
-const Blog = () => {
-  const [refresh, setRefresh] = useState(false);
-
-  const handleAddPost = () => {
-    setRefresh(!refresh);
+  const getPostData = () => {
+    axios
+      .get(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@erinmontybruce"
+      )
+      .then((res) => {
+        setPosts(res.data.items);
+        setAuthorImg(res.data.feed.image);
+      })
+      .catch((error) => {
+        console.error("Error using axios to fetch blog:", error);
+      });
   };
+  useEffect(() => {
+    getPostData();
+  }, []);
 
   return (
     <div className="blog">
-      <h1>Dev Blog</h1>
-      <AddPost onAdd={handleAddPost} />
-      <PostList key={refresh} />
+      <a
+        href="https://medium.com/@erinmontybruce"
+        target="_blank"
+        rel="noreferrer"
+        className="title"
+      >
+        <div>
+          Erin's Medium Blog
+          <img src={`${authorImg}`} alt="author img" className="author-img" />
+        </div>
+      </a>
+
+      {posts.map((post) => (
+        <div className="posts" key={post.guid}>
+          <h2>{post.title}</h2>
+          <p dangerouslySetInnerHTML={{ __html: post.content }} />
+          <a href={post.link} target="_blank" rel="noreferrer">
+            Read more
+          </a>
+        </div>
+      ))}
     </div>
   );
-};
-
-export default Blog;
+}

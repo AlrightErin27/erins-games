@@ -13,7 +13,7 @@ export default function Icon({ website }) {
     <div className="icon">
       <Link
         to={website.url}
-        target={!website.pdf ? `_blank` : null}
+        target={!website.pdf || website.url === "/resume" ? `_blank` : null}
         onClick={website.pdf ? downloadFile : null}
       >
         <div
