@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Concentration.css";
 import Card from "./ConCard";
 import img1 from "../../images/concentration/abcs.jpg";
@@ -12,24 +12,24 @@ import img8 from "../../images/concentration/purpletan.jpg";
 import img9 from "../../images/concentration/redondo.jpg";
 
 const initialCards = [
-  { id: 1, content: img1, isFlipped: false, isMatched: false },
-  { id: 2, content: img1, isFlipped: false, isMatched: false },
-  { id: 3, content: img2, isFlipped: false, isMatched: false },
-  { id: 4, content: img2, isFlipped: false, isMatched: false },
-  { id: 5, content: img3, isFlipped: false, isMatched: false },
-  { id: 6, content: img3, isFlipped: false, isMatched: false },
-  { id: 7, content: img4, isFlipped: false, isMatched: false },
-  { id: 8, content: img4, isFlipped: false, isMatched: false },
-  { id: 9, content: img5, isFlipped: false, isMatched: false },
-  { id: 10, content: img5, isFlipped: false, isMatched: false },
-  { id: 11, content: img6, isFlipped: false, isMatched: false },
-  { id: 12, content: img6, isFlipped: false, isMatched: false },
-  { id: 13, content: img7, isFlipped: false, isMatched: false },
-  { id: 14, content: img7, isFlipped: false, isMatched: false },
-  { id: 15, content: img8, isFlipped: false, isMatched: false },
-  { id: 16, content: img8, isFlipped: false, isMatched: false },
-  { id: 17, content: img9, isFlipped: false, isMatched: false },
-  { id: 18, content: img9, isFlipped: false, isMatched: false },
+  { id: 1, content: img1 },
+  { id: 2, content: img1 },
+  { id: 3, content: img2 },
+  { id: 4, content: img2 },
+  { id: 5, content: img3 },
+  { id: 6, content: img3 },
+  { id: 7, content: img4 },
+  { id: 8, content: img4 },
+  { id: 9, content: img5 },
+  { id: 10, content: img5 },
+  { id: 11, content: img6 },
+  { id: 12, content: img6 },
+  { id: 13, content: img7 },
+  { id: 14, content: img7 },
+  { id: 15, content: img8 },
+  { id: 16, content: img8 },
+  { id: 17, content: img9 },
+  { id: 18, content: img9 },
 ];
 
 export default function Concentration1() {
@@ -38,24 +38,29 @@ export default function Concentration1() {
   const [matches, setMatches] = useState(0);
   const [isChecking, setIsChecking] = useState(false);
 
-  useEffect(() => {
-    // Shuffle cards at the start
-    resetGame();
-  }, []);
-
   const shuffleCards = (cardsArray) => {
     return cardsArray
-      .map((card) => ({ ...card, sort: Math.random() }))
+      .map((card) => ({
+        ...card,
+        sort: Math.random(),
+        isFlipped: false,
+        isMatched: false,
+      }))
       .sort((a, b) => a.sort - b.sort)
       .map((card) => ({ ...card, sort: undefined, idxKey: Math.random() }));
   };
 
-  const resetGame = () => {
+  const resetGame = useCallback(() => {
     setCards(shuffleCards([...initialCards]));
     setFlippedCards([]);
     setMatches(0);
     setIsChecking(false);
-  };
+  }, []); // useCallback with an empty dependency array ensures resetGame doesn't change between renders
+
+  useEffect(() => {
+    // Shuffle cards at the start
+    resetGame();
+  }, [resetGame]);
 
   const handleCardClick = (index) => {
     if (isChecking || cards[index].isFlipped || cards[index].isMatched) return;
