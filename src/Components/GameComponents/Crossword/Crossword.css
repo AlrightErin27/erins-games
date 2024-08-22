@@ -149,7 +149,7 @@
   /* background-color: red; */
   border: none;
   cursor: pointer;
-  background-image: url("../../../images/keyStill.png");
+  background-image: url("../../../images/games/keyStill.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -157,7 +157,7 @@
   color: transparent;
 }
 .key-btn:hover {
-  background-image: url("../../../images/keyGiph.gif");
+  background-image: url("../../../images/games/keyGiph.gif");
   border-radius: 100%;
   color: black;
 }

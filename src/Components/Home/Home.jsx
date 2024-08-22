@@ -1,11 +1,11 @@
 import "./Home.css";
 import Icon from "./Icon";
-import LinkedinIcon from "../../images/linkedin.png";
-import GithubIcon from "../../images/github.png";
-import MediumIcon from "../../images/medium.png";
-import DownLoadIcon from "../../images/download.png";
-import ResumeIcon from "../../images/resumeicon.png";
-import ResumePDF from "../../images/Resume.pdf";
+import LinkedinIcon from "../../images/icons/linkedin.png";
+import GithubIcon from "../../images/icons/github.png";
+import MediumIcon from "../../images/icons/medium.png";
+import DownLoadIcon from "../../images/icons/download.png";
+import ResumeIcon from "../../images/icons/resumeicon.png";
+import ResumePDF from "../../images/resume/ErinVanBruntResumeAug2024.pdf";
 
 export default function Home() {
   const websites = [
